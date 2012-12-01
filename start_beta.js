@@ -2,12 +2,12 @@ var c;
 $(function() {
 	$.ajax({
         type:'GET',
-        url: 'https://raw.github.com/tribalCarigan/Tribalwars/master/htmlsnippets/contentContainer.html',
+        url: 'https://raw.github.com/tribalCarigan/Tribalwars/master/htmlsnippets/contentContainerBeta.html',
 		data: 'callback=c',
         success: function(data){c(data);},
         dataType:'jsonp'
     });
-	var outPut, hiddenFrame, resetCoordsButton, attackButton, sAttackButton, messages;
+	var outPut, hiddenFrame, resetCoordsButton, attackButton, sAttackButton, rAttackButton, messages;
 	
 	var initialized = false;
 
@@ -19,6 +19,7 @@ $(function() {
 		resetCoordsButton = $('#resetCoords').click(resetCoords).hide();
 		attackButton = $('#attackButton').click(attack);
 		sAttackButton = $('#sAttackButton').click(stopAttack);
+		rAttackButton = $('#resetAttack').click(resetAttack);
 		// css isn't loaded in chrome when served from github because of faulty headers
 		$('#buttons').css({'margin-left': '300px'});
 		messages = $('#messages').css({'list-style': 'none','float': 'left','width': '250px','height': '90px','overflow': 'auto'});
@@ -162,5 +163,11 @@ $(function() {
 			position=0;
 			writeCookie('position', 0);
 		}
+	}
+	function resetAttack() {
+			UI.SuccessMessage("Resetting to first Coords.", 3000);
+			position=0;
+			writeCookie('position', 0);
+		
 	}
 });
