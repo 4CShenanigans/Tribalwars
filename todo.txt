@@ -1,0 +1,11 @@
+ToDo:
+
+supress autorefresh while attacking
+integrate zomgtw tools
+
+done:
+
+move to github
+move html to external file
+add reset villagecount
+replace cookies with localstorage

@@ -7,7 +7,9 @@ $(function() {
         success: function(data){c(data);},
         dataType:'jsonp'
     });
-	var outPut, hiddenFrame, resetCoordsButton, attackButton, sAttackButton, rAttackButton, messages;
+	var outPut, hiddenFrame, resetCoordsButton, attackButton, sAttackButton, rAttackButton, messages, spinner;
+	
+	var attackTemplates = {};
 	
 	var initialized = false;
 
@@ -18,8 +20,9 @@ $(function() {
 		hiddenFrame = $('<iframe src="/game.php?village=' + game_data.village.id + '&screen=place" />').load(frameLoaded).attr('width', '0px').attr('height','0px').appendTo(outPut).hide();
 		resetCoordsButton = $('#resetCoords').click(resetCoords).hide();
 		attackButton = $('#attackButton').click(attack);
-		sAttackButton = $('#sAttackButton').click(stopAttack);
+		sAttackButton = $('#sAttackButton').click(stopAttack).hide();
 		rAttackButton = $('#resetAttack').click(resetAttack);
+		spinner = $('#loading').css({'float':'right'});
 		// css isn't loaded in chrome when served from github because of faulty headers
 		$('#buttons').css({'margin-left': '300px'});
 		messages = $('#messages').css({'list-style': 'none','float': 'left','width': '250px','height': '90px','overflow': 'auto'});
@@ -35,17 +38,17 @@ $(function() {
 		}
 		$('#saveCoords').click(function(e) {
 			villages = $('#coords').val().trim();
-			writeCookie('coords', villages);
+			storeVal('coords', villages);
 			hideCoords();
 			writeOut('Saved the coords!');
 		});
 		initialized = true;
 	}
 	
-	var villages = readCookie('coords');
+	var villages = loadVal('coords');
 	var villagearr;
 	var targets;
-	var position = readCookie('position') || 0;
+	var position = loadVal('position') || 0;
 	var attacking = false;
 	var continueAttack = true;
 
@@ -64,7 +67,7 @@ $(function() {
 	var unitPerAttack = [];
 
 	for(unitType in unitTypes) {
-		unitPerAttack[unitType] = readCookie(unitType) || 0;
+		unitPerAttack[unitType] = loadVal(unitType) || 0;
 	}
 	function sendUnits(unitType) {
 		if(unitPerAttack[unitType] == 0) return true;
@@ -81,28 +84,23 @@ $(function() {
 		messages.append('<li>' + message + '</li>');
 		messages.scrollTop(messages[0].scrollHeight); 
 	}
-	function writeCookie(name, value) {
-		document.cookie = game_data.village.id + '_' + name + '=' + value;
+	function storeVal(name, value) {
+		localStorage.setItem(game_data.village.id + '_' + name, value);
 	}
-	function readCookie(name) {
-		var nameEQ = game_data.village.id + '_' + name + "=";
-		var ca = document.cookie.split(';');
-		for(var j=0;j < ca.length;j++) {
-			var c = ca[j];
-			while (c.charAt(0)==' ') c = c.substring(1,c.length);
-			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-		}
-		return null;
+	function loadVal(name) {
+		return localStorage.getItem(game_data.village.id + '_' + name);
+	}
+	function deleteVal(name) {
+		localStorage.removeItem(game_data.village.id + '_' + name)
 	}
 	function resetCoords() {
-		writeCookie('coords', '');
 		$('#coords').val(villages).fadeIn();
 		$('#saveCoords').fadeIn();
 		resetCoordsButton.hide();
 		writeOut('reset the coords');
 	}
 	function frameLoaded() {
-		$('#loading').fadeOut();
+		spinner.fadeOut();
 		var submitAttack = hiddenFrame.contents().find('#troop_confirm_go');
 		var botProtection = hiddenFrame.contents().find('#bot_check');
 		if(botProtection.size() != 0) {
@@ -114,7 +112,7 @@ $(function() {
 				$('#' + unitType).val(unitPerAttack[unitType]).change(
 					function(e){
 						unitPerAttack[e.target.id] = $(e.target).val();
-						writeCookie(e.target.id, unitPerAttack[e.target.id]);
+						storeVal(e.target.id, unitPerAttack[e.target.id]);
 						writeOut('Updated amount for ' + unitTypes[e.target.id] + ' to: ' + unitPerAttack[e.target.id]);
 					});
 				var unitAmount = hiddenFrame.contents().find('#' + unitType).siblings().last().html();
@@ -125,8 +123,8 @@ $(function() {
 			}
 		} else {
 			position++;
-			writeCookie('position', position);
-			$('#loading').show();
+			storeVal('position', position);
+			spinner.show();
 			submitAttack.click();
 		}
 	}
@@ -146,7 +144,7 @@ $(function() {
 			hiddenFrame.contents().find('#inputy').val(getCoords[1]);
 			hiddenFrame.contents().find('#target_attack').click();
 			attacking = true;
-			$('#loading').show();
+			spinner.show();
 			writeOut('Attacking: [' + coordData + ']');
 			if(position >= targets - 1) {
 				stopAttack();
@@ -162,14 +160,14 @@ $(function() {
 			UI.SuccessMessage("Cycle complete, stopping attack and resetting to first Coords.", 3000);
 			position=0;
 			$('#attackedVillages').val(position);
-			writeCookie('position', 0);
+			storeVal('position', 0);
 		}
 	}
 	function resetAttack() {
 			UI.SuccessMessage("Resetting to first Coords.", 3000);
 			position=0;
 			$('#attackedVillages').val(position);
-			writeCookie('position', 0);
+			storeVal('position', 0);
 			
 	}
 });
