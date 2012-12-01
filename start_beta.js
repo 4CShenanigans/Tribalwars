@@ -14,11 +14,11 @@ $(function() {
 	c = function(data) {
 		$(data.htmlSnippet).insertBefore('#contentContainer');
 		outPut = $('#newContent');
-		$('<link rel="stylesheet" type="text/css" href="https://raw.github.com/tribalCarigan/Tribalwars/master/htmlsnippets/contentContainer.css" />').appendTo('head');
+		$('<link rel="stylesheet" type="text/css" href="https://raw.github.com/tribalCarigan/Tribalwars/master/htmlsnippets/contentContainer.css" />').appendTo('body');
 		hiddenFrame = $('<iframe src="/game.php?village=' + game_data.village.id + '&screen=place" />').load(frameLoaded).attr('width', '0px').attr('height','0px').appendTo(outPut).hide();
-		resetCoordsButton = $('#resetCoords').click(resetCoords).appendTo(outPut).hide();
-		attackButton = $('#attackButton').click(attack).appendTo(outPut);
-		sAttackButton = $('#sAttackButton').click(stopAttack).appendTo(outPut).hide();
+		resetCoordsButton = $('#resetCoords').click(resetCoords).hide();
+		attackButton = $('#attackButton').click(attack);
+		sAttackButton = $('#sAttackButton').click(stopAttack);
 		messages = $('#messages');
 		if(villages!=null) {
 			hideCoords();
@@ -65,7 +65,8 @@ $(function() {
 	}
 	function sendUnits(unitType) {
 		if(unitPerAttack[unitType] == 0) return true;
-		if(parseInt(hiddenFrame.contents().find('#' + unitType).siblings().last().html().replace(/^\(|\)$/g, "")) >= parseInt(unitPerAttack[unitType])) {
+		var unitAmount = hiddenFrame.contents().find('#' + unitType).siblings().last().html();
+		if(parseInt(unitAmount.substr(1, unitAmount.length - 2)) >= parseInt(unitPerAttack[unitType])) {
 			hiddenFrame.contents().find('#' + unitType).val(unitPerAttack[unitType]);
 			return true;
 		}
@@ -113,7 +114,8 @@ $(function() {
 						writeCookie(e.target.id, unitPerAttack[e.target.id]);
 						writeOut('Updated amount for ' + unitTypes[e.target.id] + ' to: ' + unitPerAttack[e.target.id]);
 					});
-				$('#amount_of_' + unitType).html(hiddenFrame.contents().find('#' + unitType).siblings().last().html().replace(/^\(|\)$/g, ""));
+				var unitAmount = hiddenFrame.contents().find('#' + unitType).siblings().last().html();
+				$('#amount_of_' + unitType).html(unitAmount.substr(1, unitAmount.length - 2));
 			}
 			if(attacking && continueAttack) {
 				attack();
