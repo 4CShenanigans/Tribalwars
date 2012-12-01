@@ -161,13 +161,15 @@ $(function() {
 		if(position >= targets - 1) {
 			UI.SuccessMessage("Cycle complete, stopping attack and resetting to first Coords.", 3000);
 			position=0;
+			$('#attackedVillages').val(position);
 			writeCookie('position', 0);
 		}
 	}
 	function resetAttack() {
 			UI.SuccessMessage("Resetting to first Coords.", 3000);
 			position=0;
+			$('#attackedVillages').val(position);
 			writeCookie('position', 0);
-		
+			
 	}
 });
