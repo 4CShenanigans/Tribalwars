@@ -1,0 +1,10 @@
+#messages {
+	float: left;
+	width: 300px;
+	height: 200px;
+	overflow: auto;
+}
+
+#buttons {
+	margin-left: 300px;
+}

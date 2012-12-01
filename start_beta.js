@@ -1,26 +1,41 @@
-// prevent global namespace pollution
+var c;
 $(function() {
 	$.ajax({
         type:'GET',
-        url:"https://raw.github.com/tribalCarigan/Tribalwars/master/htmlsnippets/contentContainer.html",
-        success:function(result) {
-            $(result.htmlSnippet).insertBefore('#contentContainer');
-			init();
-        },
+        url: 'https://raw.github.com/tribalCarigan/Tribalwars/master/htmlsnippets/contentContainer.html',
+		data: 'callback=c',
+        success: function(data){c(data);},
         dataType:'jsonp'
     });
-	var outPut, hiddenFrame, resetCoordsButton, attackButton, sAttackButton, buttons, messages;
+	var outPut, hiddenFrame, resetCoordsButton, attackButton, sAttackButton, messages;
 	
 	var initialized = false;
 
-	function init() {
+	c = function(data) {
+		$(data.htmlSnippet).insertBefore('#contentContainer');
 		outPut = $('#newContent');
+		$('<link rel="stylesheet" type="text/css" href="https://raw.github.com/tribalCarigan/Tribalwars/master/htmlsnippets/contentContainer.css" />').appendTo('head');
 		hiddenFrame = $('<iframe src="/game.php?village=' + game_data.village.id + '&screen=place" />').load(frameLoaded).attr('width', '0px').attr('height','0px').appendTo(outPut).hide();
 		resetCoordsButton = $('#resetCoords').click(resetCoords).appendTo(outPut).hide();
 		attackButton = $('#attackButton').click(attack).appendTo(outPut);
 		sAttackButton = $('#sAttackButton').click(stopAttack).appendTo(outPut).hide();
-		buttons = $('#buttons').css('margin-left', '300px');
-		messages = $('#messages').css({float:'left',width:'300px',height:'200px',overflow:'auto'});
+		messages = $('#messages');
+		if(villages!=null) {
+			hideCoords();
+		}
+		function hideCoords() {
+			$('#coords').hide();
+			$('#saveCoords').hide();
+			villagearr = villages.split(" ");
+			targets = villagearr.length;
+			resetCoordsButton.show();
+		}
+		$('#saveCoords').click(function(e) {
+			villages = $('#coords').val().trim();
+			writeCookie('coords', villages);
+			hideCoords();
+			writeOut('Saved the coords!');
+		});
 		initialized = true;
 	}
 	
@@ -31,22 +46,6 @@ $(function() {
 	var attacking = false;
 	var continueAttack = true;
 
-	if(villages!=null) {
-		hideCoords();
-	}
-	function hideCoords() {
-		$('#coords').hide();
-		$('#saveCoords').hide();
-		villagearr = villages.split(" ");
-		targets = villagearr.length;
-		resetCoordsButton.show();
-	}
-	$('#saveCoords').click(function(e) {
-		villages = $('#coords').val().trim();
-		writeCookie('coords', villages);
-		hideCoords();
-		writeOut('Saved the coords!');
-	});
 	var unitTypes = {
 		'unit_input_spear': 'Spears', 
 		'unit_input_sword': 'Swords', 
@@ -75,7 +74,7 @@ $(function() {
 		return false;
 	}
 	function writeOut(message) {
-		$('#messages').append('<li>' + message + '</li>');
+		messages.append('<li>' + message + '</li>');
 		messages.scrollTop(messages[0].scrollHeight); 
 	}
 	function writeCookie(name, value) {
