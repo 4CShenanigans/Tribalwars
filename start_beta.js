@@ -19,7 +19,9 @@ $(function() {
 		resetCoordsButton = $('#resetCoords').click(resetCoords).hide();
 		attackButton = $('#attackButton').click(attack);
 		sAttackButton = $('#sAttackButton').click(stopAttack);
-		messages = $('#messages');
+		// css isn't loaded in chrome when served from github because of faulty headers
+		$('#buttons').css({'margin-left': '300px'});
+		messages = $('#messages').css({'list-style': 'none','float': 'left','width': '250px','height': '90px','overflow': 'auto'});
 		if(villages!=null) {
 			hideCoords();
 		}
