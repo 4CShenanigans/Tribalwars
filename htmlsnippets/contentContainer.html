@@ -1,132 +1,132 @@
-<table align="center" id="contentContainer" width="100%">
-	<tr>
-		<td>
-			<table class="content-border" width="100%" cellspacing="0">
-				<tr>
-					<td id="inner-border">
-						<div id="newContent">
-							<ul id="messages" style="float:left;">
-								<li id="loading">Loading ... please wait</li>
-								<li>Creating the conf table</li>
-							</ul>
-							<div id="buttons">
-								<input type="text" id="coords" />
-								<button id="saveCoords">Save Villages to attack</button>
-								<button id="resetCoords">Change coords</button>
-								<button id="attackButton">Attack</button>
-								<button id="sAttackButton">Stop attacking</button>
-							</div>
-							<table style="float:left;">
-								<tbody>
-									<tr>
-										<td valign="top">
-											<table class="vis" width="100%">
-												<tbody>
-													<tr>
-														<td class="nowrap">
-															<img src="http://cdn2.tribalwars.net/graphic/unit/unit_spear.png?48b3b" title="Spear fighter" alt="Spear fighter" class="" />
-															<input id="unit_input_spear" name="spear" type="text" style="width: 40px" tabindex="1" value="" class="unitsInput" />
-															<i id="amount_of_unit_input_spear">fetching...</i>&nbsp;
-														</td>
-													</tr>
-													<tr>
-														<td class="nowrap">
-															<img src="http://cdn2.tribalwars.net/graphic/unit/unit_sword.png?b389d" title="Swordsman" alt="Swordsman" class="" />
-															<input id="unit_input_sword" name="sword" type="text" style="width: 40px" tabindex="2" value="" class="unitsInput" />
-															<i id="amount_of_unit_input_sword">fetching...</i>&nbsp;
-														</td>
-													</tr>
-													<tr>
-														<td class="nowrap">
-															<img src="http://cdn2.tribalwars.net/graphic/unit/unit_axe.png?51d94" title="Axeman" alt="Axeman" class="" />
-															<input id="unit_input_axe" name="axe" type="text" style="width: 40px" tabindex="3" value="" class="unitsInput" />
-															<i id="amount_of_unit_input_axe">fetching...</i>&nbsp;
-														</td>
-													</tr>
-												</tbody>
-											</table>
-										</td>
-										<td valign="top">
-											<table class="vis" width="100%">
-												<tbody>
-													<tr>
-														<td class="nowrap">
-															<img src="http://cdn2.tribalwars.net/graphic/unit/unit_spy.png?eb866" title="Scout" alt="Scout" class="" />
-															<input id="unit_input_spy" name="spy" type="text" style="width: 40px" tabindex="4" value="" class="unitsInput" />
-															<i id="amount_of_unit_input_spy">fetching...</i>&nbsp;
-														</td>
-													</tr>
-													<tr>
-														<td class="nowrap">
-															<img src="http://cdn2.tribalwars.net/graphic/unit/unit_light.png?2d86d" title="Light cavalry" alt="Light cavalry" class="" />
-															<input id="unit_input_light" name="light" type="text" style="width: 40px" tabindex="5" value="" class="unitsInput" />
-															<i id="amount_of_unit_input_light">fetching...</i>&nbsp;
-														</td>
-													</tr>
-													<tr>
-														<td class="nowrap">
-															<img src="http://cdn2.tribalwars.net/graphic/unit/unit_heavy.png?a83c9" title="Heavy cavalry" alt="Heavy cavalry" class="" />
-															<input id="unit_input_heavy" name="heavy" type="text" style="width: 40px" tabindex="6" value="" class="unitsInput" />
-															<i id="amount_of_unit_input_heavy">fetching...</i>&nbsp;
-														</td>
-													</tr>
-												</tbody>
-											</table>
-										</td>
-										<td valign="top">
-											<table class="vis" width="100%">
-												<tbody>
-													<tr>
-														<td class="nowrap">
-															<img src="http://cdn2.tribalwars.net/graphic/unit/unit_ram.png?2003e" title="Ram" alt="Ram" class="" />
-															<input id="unit_input_ram" name="ram" type="text" style="width: 40px" tabindex="7" value="" class="unitsInput" />
-															<i id="amount_of_unit_input_ram">fetching...</i>&nbsp;
-														</td>
-													</tr>
-													<tr>
-														<td class="nowrap">
-															<img src="http://cdn2.tribalwars.net/graphic/unit/unit_catapult.png?5659c" title="Catapult" alt="Catapult" class="" />
-															<input id="unit_input_catapult" name="catapult" type="text" style="width: 40px" tabindex="8" value="" class="unitsInput" />
-															<i id="amount_of_unit_input_spear">fetching...</i>&nbsp;
-														</td>
-													</tr>
-												</tbody>
-											</table>
-										</td>
-										<td valign="top">
-											<table class="vis" width="100%">
-												<tbody>
-													<tr>
-														<td class="nowrap">
-															<img src="http://cdn2.tribalwars.net/graphic/unit/unit_knight.png?58dd0" title="Paladin" alt="Paladin" class="" />
-															<input id="unit_input_knight" name="knight" type="text" style="width: 40px" tabindex="9" value="" class="unitsInput" />
-															<i id="amount_of_unit_input_knight">fetching...</i>&nbsp;
-														</td>
-													</tr>
-													<tr>
-														<td class="nowrap">
-															<img src="http://cdn2.tribalwars.net/graphic/unit/unit_snob.png?0019c" title="Nobleman" alt="Nobleman" class="" />
-															<input id="unit_input_snob" name="snob" type="text" style="width: 40px" tabindex="10" value="" class="unitsInput" />
-															<i id="amount_of_unit_input_snob">fetching...</i>&nbsp;
-														</td>
-													</tr>
-													<tr>
-														<td class="nowrap">
-															<img src="http://cdn2.tribalwars.net/graphic/command/attack.png?0019c" title="Attacked villages" alt="Attacked villages" class="" />
-															<input id="attackedVillages" name="attackedVillages" type="text" style="width: 40px" tabindex="10" value="" class="unitsInput" disabled="disabled" />
-															<i id="amount_of_attackedVillages">fetching...</i>&nbsp;
-														</td>
-													</tr>
-												</tbody>
-											</table>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-</table>
+c({htmlSnippet: '<table align="center" id="contentContainer" width="100%">\
+	<tr>\
+		<td>\
+			<table class="content-border" width="100%" cellspacing="0">\
+				<tr>\
+					<td id="inner-border">\
+						<div id="newContent">\
+							<ul id="messages" style="float:left;">\
+								<li id="loading">Loading ... please wait</li>\
+								<li>Creating the conf table</li>\
+							</ul>\
+							<div id="buttons">\
+								<input type="text" id="coords" />\
+								<button id="saveCoords">Save Villages to attack</button>\
+								<button id="resetCoords">Change coords</button>\
+								<button id="attackButton">Attack</button>\
+								<button id="sAttackButton">Stop attacking</button>\
+							</div>\
+							<table style="float:left;">\
+								<tbody>\
+									<tr>\
+										<td valign="top">\
+											<table class="vis" width="100%">\
+												<tbody>\
+													<tr>\
+														<td class="nowrap">\
+															<img src="http://cdn2.tribalwars.net/graphic/unit/unit_spear.png?48b3b" title="Spear fighter" alt="Spear fighter" class="" />\
+															<input id="unit_input_spear" name="spear" type="text" style="width: 40px" tabindex="1" value="" class="unitsInput" />\
+															<i id="amount_of_unit_input_spear">fetching...</i>&nbsp;\
+														</td>\
+													</tr>\
+													<tr>\
+														<td class="nowrap">\
+															<img src="http://cdn2.tribalwars.net/graphic/unit/unit_sword.png?b389d" title="Swordsman" alt="Swordsman" class="" />\
+															<input id="unit_input_sword" name="sword" type="text" style="width: 40px" tabindex="2" value="" class="unitsInput" />\
+															<i id="amount_of_unit_input_sword">fetching...</i>&nbsp;\
+														</td>\
+													</tr>\
+													<tr>\
+														<td class="nowrap">\
+															<img src="http://cdn2.tribalwars.net/graphic/unit/unit_axe.png?51d94" title="Axeman" alt="Axeman" class="" />\
+															<input id="unit_input_axe" name="axe" type="text" style="width: 40px" tabindex="3" value="" class="unitsInput" />\
+															<i id="amount_of_unit_input_axe">fetching...</i>&nbsp;\
+														</td>\
+													</tr>\
+												</tbody>\
+											</table>\
+										</td>\
+										<td valign="top">\
+											<table class="vis" width="100%">\
+												<tbody>\
+													<tr>\
+														<td class="nowrap">\
+															<img src="http://cdn2.tribalwars.net/graphic/unit/unit_spy.png?eb866" title="Scout" alt="Scout" class="" />\
+															<input id="unit_input_spy" name="spy" type="text" style="width: 40px" tabindex="4" value="" class="unitsInput" />\
+															<i id="amount_of_unit_input_spy">fetching...</i>&nbsp;\
+														</td>\
+													</tr>\
+													<tr>\
+														<td class="nowrap">\
+															<img src="http://cdn2.tribalwars.net/graphic/unit/unit_light.png?2d86d" title="Light cavalry" alt="Light cavalry" class="" />\
+															<input id="unit_input_light" name="light" type="text" style="width: 40px" tabindex="5" value="" class="unitsInput" />\
+															<i id="amount_of_unit_input_light">fetching...</i>&nbsp;\
+														</td>\
+													</tr>\
+													<tr>\
+														<td class="nowrap">\
+															<img src="http://cdn2.tribalwars.net/graphic/unit/unit_heavy.png?a83c9" title="Heavy cavalry" alt="Heavy cavalry" class="" />\
+															<input id="unit_input_heavy" name="heavy" type="text" style="width: 40px" tabindex="6" value="" class="unitsInput" />\
+															<i id="amount_of_unit_input_heavy">fetching...</i>&nbsp;\
+														</td>\
+													</tr>\
+												</tbody>\
+											</table>\
+										</td>\
+										<td valign="top">\
+											<table class="vis" width="100%">\
+												<tbody>\
+													<tr>\
+														<td class="nowrap">\
+															<img src="http://cdn2.tribalwars.net/graphic/unit/unit_ram.png?2003e" title="Ram" alt="Ram" class="" />\
+															<input id="unit_input_ram" name="ram" type="text" style="width: 40px" tabindex="7" value="" class="unitsInput" />\
+															<i id="amount_of_unit_input_ram">fetching...</i>&nbsp;\
+														</td>\
+													</tr>\
+													<tr>\
+														<td class="nowrap">\
+															<img src="http://cdn2.tribalwars.net/graphic/unit/unit_catapult.png?5659c" title="Catapult" alt="Catapult" class="" />\
+															<input id="unit_input_catapult" name="catapult" type="text" style="width: 40px" tabindex="8" value="" class="unitsInput" />\
+															<i id="amount_of_unit_input_spear">fetching...</i>&nbsp;\
+														</td>\
+													</tr>\
+												</tbody>\
+											</table>\
+										</td>\
+										<td valign="top">\
+											<table class="vis" width="100%">\
+												<tbody>\
+													<tr>\
+														<td class="nowrap">\
+															<img src="http://cdn2.tribalwars.net/graphic/unit/unit_knight.png?58dd0" title="Paladin" alt="Paladin" class="" />\
+															<input id="unit_input_knight" name="knight" type="text" style="width: 40px" tabindex="9" value="" class="unitsInput" />\
+															<i id="amount_of_unit_input_knight">fetching...</i>&nbsp;\
+														</td>\
+													</tr>\
+													<tr>\
+														<td class="nowrap">\
+															<img src="http://cdn2.tribalwars.net/graphic/unit/unit_snob.png?0019c" title="Nobleman" alt="Nobleman" class="" />\
+															<input id="unit_input_snob" name="snob" type="text" style="width: 40px" tabindex="10" value="" class="unitsInput" />\
+															<i id="amount_of_unit_input_snob">fetching...</i>&nbsp;\
+														</td>\
+													</tr>\
+													<tr>\
+														<td class="nowrap">\
+															<img src="http://cdn2.tribalwars.net/graphic/command/attack.png?0019c" title="Attacked villages" alt="Attacked villages" class="" />\
+															<input id="attackedVillages" name="attackedVillages" type="text" style="width: 40px" tabindex="10" value="" class="unitsInput" disabled="disabled" />\
+															<i id="amount_of_attackedVillages">fetching...</i>&nbsp;\
+														</td>\
+													</tr>\
+												</tbody>\
+											</table>\
+										</td>\
+									</tr>\
+								</tbody>\
+							</table>\
+						</div>\
+					</td>\
+				</tr>\
+			</table>\
+		</td>\
+	</tr>\
+</table>'});

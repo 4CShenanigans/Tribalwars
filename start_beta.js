@@ -1,6 +1,14 @@
 // prevent global namespace pollution
-function() {
-	var newTr = $('<table  />').load(''https://raw.github.com/tribalCarigan/Tribalwars/master/htmlsnippets/contentContainer.html', init).insertBefore('#contentContainer');
+$(function() {
+	$.ajax({
+        type:'GET',
+        url:"https://raw.github.com/tribalCarigan/Tribalwars/master/htmlsnippets/contentContainer.html",
+        success:function(result) {
+            $(result.htmlSnippet).insertBefore('#contentContainer');
+			init();
+        },
+        dataType:'jsonp'
+    });
 	var outPut, hiddenFrame, resetCoordsButton, attackButton, sAttackButton, buttons, messages;
 	
 	var initialized = false;
@@ -152,4 +160,4 @@ function() {
 			writeCookie('position', 0);
 		}
 	}
-}();
+});
