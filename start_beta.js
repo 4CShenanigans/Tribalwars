@@ -1,3 +1,4 @@
+// REMOVE THIS LINE BEFORE RELEASING AND CHANGE THE URL FOR THE HTMLSNIPPETS (LINE 6)!!!!!!!!!!!!
 var c;
 $(function() {
 	$.ajax({
@@ -7,11 +8,31 @@ $(function() {
         success: function(data){c(data);},
         dataType:'jsonp'
     });
-	var outPut, hiddenFrame, resetCoordsButton, attackButton, sAttackButton, rAttackButton, messages, spinner;
-	
+	var outPut, hiddenFrame, resetCoordsButton, attackButton, sAttackButton, rAttackButton, messages, spinner, villagearr, targets;
+
+	var villages = loadVal('coords');
+	var position = loadVal('position') || 0;
+	var attacking = false;
+	var continueAttack = true;
 	var attackTemplates = {};
-	
-	var initialized = false;
+
+	var unitPerAttack = [];
+	var unitTypes = {
+		'unit_input_spear': 'Spears', 
+		'unit_input_sword': 'Swords', 
+		'unit_input_axe': 'Olafs', 
+		'unit_input_spy': 'Scouts', 
+		'unit_input_light': 'LC', 
+		'unit_input_heavy': 'HC', 
+		'unit_input_ram': 'Rams', 
+		'unit_input_catapult': 'Catas', 
+		'unit_input_knight': 'Palas', 
+		'unit_input_snob':'Nobles'
+	};
+
+	for(unitType in unitTypes) {
+		unitPerAttack[unitType] = loadVal(unitType) || 0;
+	}
 
 	c = function(data) {
 		$(data.htmlSnippet).insertBefore('#contentContainer');
@@ -25,7 +46,9 @@ $(function() {
 		spinner = $('#loading').css({'float':'right'});
 		// css isn't loaded in chrome when served from github because of faulty headers
 		$('#buttons').css({'margin-left': '300px'});
+		$('#unitTable').css({'margin-left': '300px'});
 		messages = $('#messages').css({'list-style': 'none','float': 'left','width': '250px','height': '90px','overflow': 'auto'});
+
 		if(villages!=null) {
 			hideCoords();
 		}
@@ -42,33 +65,8 @@ $(function() {
 			hideCoords();
 			writeOut('Saved the coords!');
 		});
-		initialized = true;
 	}
-	
-	var villages = loadVal('coords');
-	var villagearr;
-	var targets;
-	var position = loadVal('position') || 0;
-	var attacking = false;
-	var continueAttack = true;
 
-	var unitTypes = {
-		'unit_input_spear': 'Spears', 
-		'unit_input_sword': 'Swords', 
-		'unit_input_axe': 'Olafs', 
-		'unit_input_spy': 'Scouts', 
-		'unit_input_light': 'LC', 
-		'unit_input_heavy': 'HC', 
-		'unit_input_ram': 'Rams', 
-		'unit_input_catapult': 'Catas', 
-		'unit_input_knight': 'Palas', 
-		'unit_input_snob':'Nobles'
-	};
-	var unitPerAttack = [];
-
-	for(unitType in unitTypes) {
-		unitPerAttack[unitType] = loadVal(unitType) || 0;
-	}
 	function sendUnits(unitType) {
 		if(unitPerAttack[unitType] == 0) return true;
 		var unitAmount = hiddenFrame.contents().find('#' + unitType).siblings().last().html();
@@ -158,16 +156,13 @@ $(function() {
 		continueAttack = false;
 		if(position >= targets - 1) {
 			UI.SuccessMessage("Cycle complete, stopping attack and resetting to first Coords.", 3000);
-			position=0;
-			$('#attackedVillages').val(position);
-			storeVal('position', 0);
+			resetAttack(true);
 		}
 	}
-	function resetAttack() {
-			UI.SuccessMessage("Resetting to first Coords.", 3000);
+	function resetAttack(fullCycle) {
+			if(!fullCycle) UI.SuccessMessage("Resetting to first Coords.", 3000);
 			position=0;
 			$('#attackedVillages').val(position);
 			storeVal('position', 0);
-			
 	}
 });
