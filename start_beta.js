@@ -194,6 +194,7 @@ $(function() {
 	function templateFinished() {
 		if (templAttackId.val()) {
 			saveAttack(templAttackId.val());
+			loadAttack(attackId);
 		} else {
 			createAttack();
 		}
