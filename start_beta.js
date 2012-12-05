@@ -1,13 +1,13 @@
 // REMOVE THIS LINE BEFORE RELEASING AND CHANGE THE URL FOR THE HTMLSNIPPETS (LINE 6)!!!!!!!!!!!!
 var c;
 $(function() {
-//	$.ajax({
-//		type : 'GET',
-//		url : 'https://raw.github.com/tribalCarigan/Tribalwars/master/htmlsnippets/contentContainerBeta.html',
-//		data : 'callback=c',
-//		success : function(data) { c(data); },
-//		dataType : 'jsonp'
-//	});
+	$.ajax({
+		type : 'GET',
+		url : 'https://raw.github.com/tribalCarigan/Tribalwars/master/htmlsnippets/contentContainerBeta.html',
+		data : 'callback=c',
+		success : function(data) { c(data); },
+		dataType : 'jsonp'
+	});
 
 	var outPut, hiddenFrame, attackButton, sAttackButton, rAttackButton, cAttackButton, popup, messages, spinner, villagearr, targets, attackId, templAttackId, villages, continuousAttack, attackList;
 
