@@ -160,7 +160,7 @@ $(function() {
 		sAttackButton.hide();
 		attacking = false;
 		continueAttack = false;
-		if (getPosition() >= targets - 1) {
+		if (getPosition() >= targets) {
 			UI.SuccessMessage("Cycle complete, stopping attack and resetting to first Coords.", 3000);
 			resetAttack(true);
 		}
@@ -177,13 +177,14 @@ $(function() {
 			$('#template_name').val(attackTemplates[id].name);
 			$('#template_coords').val(attackTemplates[id].coords);
 			for (unitType in unitTypes) {
-				$('#template_' + unitType).val(
-						attackTemplates[id].unitsPerAttack[unitType]);
+				$('#template_' + unitType).val(attackTemplates[id].unitsPerAttack[unitType]);
 			}
+			$('#template_position').val(attackTemplates[id].position);
 		} else {
 			templAttackId.val();
 			$('#template_name').val();
 			$('#template_coords').val();
+			$('#template_position').val(0);
 			for (unitType in unitTypes) {
 				$('#template_' + unitType).val(0);
 			}
