@@ -1,5 +1,6 @@
 // REMOVE THIS LINE BEFORE RELEASING AND CHANGE THE URL FOR THE HTMLSNIPPETS (LINE 6)!!!!!!!!!!!!
 var c;
+
 $(function() {
 	$.ajax({
 		type : 'GET',
@@ -8,10 +9,8 @@ $(function() {
 		success : function(data) { c(data); },
 		dataType : 'jsonp'
 	});
-
 	var outPut, hiddenFrame, attackButton, sAttackButton, rAttackButton, cAttackButton, popup, messages, spinner, villagearr, targets, attackId, templAttackId, villages, continuousAttack, attackList;
 
-	var position = loadVal('position') || 0;
 	var attacking = false;
 	var continueAttack = true;
 	var attackTemplates = {};
@@ -19,14 +18,14 @@ $(function() {
 	var unitTypes = {
 		'unit_input_spear' : 'Spears',
 		'unit_input_sword' : 'Swords',
-		'unit_input_axe' : 'Olafs',
-		'unit_input_spy' : 'Scouts',
+		'unit_input_axe'   : 'Olafs',
+		'unit_input_spy'   : 'Scouts',
 		'unit_input_light' : 'LC',
 		'unit_input_heavy' : 'HC',
-		'unit_input_ram' : 'Rams',
+		'unit_input_ram'   : 'Rams',
 		'unit_input_catapult' : 'Catas',
-		'unit_input_knight' : 'Palas',
-		'unit_input_snob' : 'Nobles'
+		'unit_input_knight': 'Palas',
+		'unit_input_snob'  : 'Nobles'
 	};
 	c = function(data) {
 		$(data.htmlSnippet).insertBefore('#contentContainer');
@@ -34,14 +33,15 @@ $(function() {
 		outPut = $('#newContent').css({
 			'position' : 'relative'
 		});
-		hiddenFrame = $('<iframe src="/game.php?village=' + game_data.village.id + '&screen=place" />').load(frameLoaded).attr('width', '0px').attr('height', '0px').appendTo(outPut).hide();
+		hiddenFrame = $( '<iframe src="/game.php?village=' + game_data.village.id + '&screen=place" />').load(frameLoaded).attr('width', '0px').attr('height', '0px').appendTo(outPut).hide();
 		attackButton = $('#attackButton').click(attack);
 		sAttackButton = $('#sAttackButton').click(stopAttack).hide();
 		rAttackButton = $('#resetAttack').click(resetAttack);
-		cAttackButton = $('#cAttackButton').click(function() { showAttackTemplate(); });
+		cAttackButton = $('#cAttackButton').click(function() {showAttackTemplate();});
 		attackTemplateSaveLink = $('#saveTemplate').click(templateFinished);
 		templAttackId = $('#template_attackId');
-		// css isn't loaded in chrome when served from github because of faulty headers
+		// css isn't loaded in chrome when served from github because of faulty
+		// headers
 		// $('<link rel="stylesheet" type="text/css" href="https://raw.github.com/tribalCarigan/Tribalwars/master/htmlsnippets/contentContainer.css" />').appendTo('body');
 		spinner = $('#loading').css({
 			'position' : 'absolute',
@@ -81,11 +81,10 @@ $(function() {
 	};
 
 	function sendUnits(unitType) {
-		if (unitPerAttack[unitType] == 0)
-			return true;
+		if (unitPerAttack[unitType] == 0) return true;
 		var unitAmount = hiddenFrame.contents().find('#' + unitType).siblings().last().html();
 		if (parseInt(unitAmount.substr(1, unitAmount.length - 2)) >= parseInt(unitPerAttack[unitType])) {
-			hiddenFrame.contents().find('#' + unitType).val(unitPerAttack[unitType]);
+			hiddenFrame.contents().find('#' + unitType).val( unitPerAttack[unitType]);
 			return true;
 		}
 		UI.ErrorMessage(('Not enough units of type: ' + unitTypes[unitType]), 3000);
@@ -111,7 +110,7 @@ $(function() {
 		var submitAttack = hiddenFrame.contents().find('#troop_confirm_go');
 		var botProtection = hiddenFrame.contents().find('#bot_check');
 		if (botProtection.size() != 0) {
-			UI.ErrorMessage('Bot Protection! you need to enter a captcha somewhere... not sure yet what to do', 3000);
+			UI.ErrorMessage( 'Bot Protection! you need to enter a captcha somewhere... not sure yet what to do', 3000);
 		}
 		if (submitAttack.size() == 0) {
 			loadAttack(attackId);
@@ -120,8 +119,15 @@ $(function() {
 				attack();
 			}
 		} else {
-			position++;
-			storeVal('position', position);
+			attackTemplates[attackId].position = getPosition() + 1;
+			if (getPosition() >= targets) {
+				if (continuousAttack.is(':checked')) {
+					resetAttack();
+				} else {
+					stopAttack();
+				}
+			}
+			storeVal('attacktemplates', JSON.stringify(attackTemplates));
 			spinner.show();
 			submitAttack.click();
 		}
@@ -129,7 +135,7 @@ $(function() {
 	function attack() {
 		attackButton.hide();
 		sAttackButton.show();
-		coordData = villagearr[position];
+		coordData = villagearr[getPosition()];
 		getCoords = coordData.split("|");
 		continueAttack = true;
 		for (unitType in unitPerAttack) {
@@ -144,39 +150,35 @@ $(function() {
 			attacking = true;
 			spinner.show();
 			writeOut('Attacking: [' + coordData + ']');
-			if (position >= targets - 1) {
-				if (continuousAttack.is(':checked')) {
-					resetAttack(true);
-				} else {
-					stopAttack();
-				}
-			}
 		}
+	}
+	function getPosition() {
+		return parseInt(attackTemplates[attackId].position);
 	}
 	function stopAttack() {
 		attackButton.show();
 		sAttackButton.hide();
 		attacking = false;
 		continueAttack = false;
-		if (position >= targets - 1) {
-			UI.SuccessMessage("Cycle complete, stopping attack and resetting to first Coords.",3000);
+		if (getPosition() >= targets - 1) {
+			UI.SuccessMessage("Cycle complete, stopping attack and resetting to first Coords.", 3000);
 			resetAttack(true);
 		}
 	}
 	function resetAttack(fullCycle) {
 		if (!fullCycle) UI.SuccessMessage("Resetting to first Coords.", 3000);
-		position = 0;
-		$('#attackedVillages').val(position);
-		storeVal('position', 0);
+		attackTemplates[attackId].position = 0;
+		$('#attackedVillages').val(getPosition());
+		storeVal('attacktemplates', JSON.stringify(attackTemplates));
 	}
 	function showAttackTemplate(id) {
-		console.log(arguments);
 		if (id) {
 			templAttackId.val(id);
 			$('#template_name').val(attackTemplates[id].name);
 			$('#template_coords').val(attackTemplates[id].coords);
 			for (unitType in unitTypes) {
-				$('#template_' + unitType).val(attackTemplates[id].unitsPerAttack[unitType]);
+				$('#template_' + unitType).val(
+						attackTemplates[id].unitsPerAttack[unitType]);
 			}
 		} else {
 			templAttackId.val();
@@ -196,7 +198,7 @@ $(function() {
 		} else {
 			createAttack();
 		}
-		if (templAttackId.val() == attackId) {
+		if (templAttackId.val() == attackId || !attackId) {
 			loadAttack(attackId);
 		}
 		populateAttackList();
@@ -205,6 +207,7 @@ $(function() {
 
 	function createAttack() {
 		var newId = '_' + new Date().getTime(); // attackTemplates.length; what happens if an entry gets removed?
+		$('#template_position').val(0);
 		saveAttack(newId);
 		populateAttackList();
 	}
@@ -218,7 +221,8 @@ $(function() {
 		var attack = {
 			name : $('#template_name').val().trim(),
 			unitsPerAttack : templateUnits,
-			coords : $('#template_coords').val().trim()
+			coords : $('#template_coords').val().trim(),
+			position: $('#template_position').val()
 		};
 		attackTemplates[id] = attack;
 		storeVal('attacktemplates', JSON.stringify(attackTemplates));
@@ -251,12 +255,12 @@ $(function() {
 
 	function loadAttack(id) {
 		if (!id) {
-			for (id in attackTemplates)
-				break;
+			for (id in attackTemplates) break;
 			if (!id) {
 				// new user.. show templates
 				attackTemplates = {};
 				showAttackTemplate();
+				$('#template_position').val(0);
 				return;
 			}
 		}
@@ -270,30 +274,30 @@ $(function() {
 		villages = attack.coords;
 		villagearr = villages.split(" ");
 		targets = villagearr.length;
-		$('#attackedVillages').val(position);
+		$('#attackedVillages').val(getPosition());
 		$('#amount_of_attackedVillages').html(targets);
 		showAttack();
 		return attack;
 	}
 
 	function removeAttack(id) {
+		// TODO: add behaviour for saving the active template
 		delete attackTemplates[id];
 		populateAttackList();
 	}
-
 	function populateAttackList() {
 		// reset the list just to be sure
 		attackList.children().remove();
 		for ( var templId in attackTemplates) {
 			var item = $('<tr><td>' + attackTemplates[templId].name + '</td></tr>').appendTo(attackList);
-			$('<td />').html('L').bind('click', {attack: templId}, function(event) { loadAttack(event.data.attack); }).css({
+			$('<td title="Load this attack" />').html('L').bind('click', { attack : templId }, function(event) { loadAttack(event.data.attack); }).css({
 				'width' : '10px',
-				'cursor': 'pointer',
+				'cursor' : 'pointer',
 				'color' : '#0f0'
 			}).appendTo(item);
-			$('<td />').html('X').bind('click', {attack: templId}, function(event) { removeAttack(event.data.attack); }).css({
+			$('<td title="Remove this attack (CAN NOT BE UNDONE)" />').html('X').bind('click', { attack : templId }, function(event) { removeAttack(event.data.attack); }).css({
 				'width' : '10px',
-				'cursor': 'pointer',
+				'cursor' : 'pointer',
 				'color' : '#f00'
 			}).appendTo(item);
 		}
