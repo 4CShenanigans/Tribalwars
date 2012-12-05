@@ -109,6 +109,21 @@ $(function() {
 		spinner.fadeOut();
 		var submitAttack = hiddenFrame.contents().find('#troop_confirm_go');
 		var botProtection = hiddenFrame.contents().find('#bot_check');
+		var generalError = hiddenFrame.contents().find('#error');
+		if(generalError.length > 0 && generalError.html().indexOf("banned") !== -1) {
+			UI.ErrorMessage( 'The village owner is banned! Remove this village from the list! Continuing with next Village', 3000);
+			coordData = villagearr[getPosition()];
+			writeOut('Ignoring [' + coordData + ']');
+			attackTemplates[attackId].position = getPosition() + 1;
+			if (getPosition() >= targets) {
+				if (continuousAttack.is(':checked')) {
+					resetAttack();
+				} else {
+					stopAttack();
+				}
+			}
+			storeVal('attacktemplates', JSON.stringify(attackTemplates));
+		}
 		if (botProtection.size() != 0) {
 			UI.ErrorMessage( 'Bot Protection! you need to enter a captcha somewhere... not sure yet what to do', 3000);
 		}
@@ -282,8 +297,9 @@ $(function() {
 	}
 
 	function removeAttack(id) {
-		// TODO: add behaviour for saving the active template
+		// TODO: add behaviour for deleting the active template
 		delete attackTemplates[id];
+		storeVal('attacktemplates', JSON.stringify(attackTemplates));
 		populateAttackList();
 	}
 	function populateAttackList() {
