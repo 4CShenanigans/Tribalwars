@@ -1,13 +1,13 @@
 // REMOVE THIS LINE BEFORE RELEASING AND CHANGE THE URL FOR THE HTMLSNIPPETS (LINE 6)!!!!!!!!!!!!
 var c;
 $(function() {
-	$.ajax({
-		type : 'GET',
-		url : 'https://raw.github.com/tribalCarigan/Tribalwars/master/htmlsnippets/contentContainerBeta.html',
-		data : 'callback=c',
-		success : function(data) { c(data); },
-		dataType : 'jsonp'
-	});
+//	$.ajax({
+//		type : 'GET',
+//		url : 'https://raw.github.com/tribalCarigan/Tribalwars/master/htmlsnippets/contentContainerBeta.html',
+//		data : 'callback=c',
+//		success : function(data) { c(data); },
+//		dataType : 'jsonp'
+//	});
 
 	var outPut, hiddenFrame, attackButton, sAttackButton, rAttackButton, cAttackButton, popup, messages, spinner, villagearr, targets, attackId, templAttackId, villages, continuousAttack, attackList;
 
@@ -52,11 +52,9 @@ $(function() {
 
 		});
 		attackList = $('#attackList').css({
-			'list-style' : 'none',
 			'width' : '120px',
-			'height' : '90px',
-			'overflow' : 'auto',
-			'float' : 'right'
+			'float' : 'right',
+			'margin-top' : '10px'
 		});
 		$('#attackName').css({
 			'margin' : '0',
@@ -287,16 +285,23 @@ $(function() {
 		// reset the list just to be sure
 		attackList.children().remove();
 		for ( var templId in attackTemplates) {
-			var item = $('<li>'
-				+ attackTemplates[templId].name
-				+ ' <a href="javascript:loadAttack(\''
-				+ templId
-				+ '\');" title="Load this template">L</a> <a href="javascript:removeAttack(\''
-				+ templId
-				+ '\');" title="Remove this template">X</a> </li>').appendTo(attackList);
+			var item = $('<tr><td>' + attackTemplates[templId].name + '</td></tr>').appendTo(attackList);
+			$('<td />').html('L').bind('click', {attack: templId}, function(event) { loadAttack(event.data.attack); }).css({
+				'width' : '10px',
+				'cursor': 'pointer',
+				'color' : '#0f0'
+			}).appendTo(item);
+			$('<td />').html('X').bind('click', {attack: templId}, function(event) { removeAttack(event.data.attack); }).css({
+				'width' : '10px',
+				'cursor': 'pointer',
+				'color' : '#f00'
+			}).appendTo(item);
 		}
 		// some "styling"
-		$('#attackList li:odd').css({
+		$('#attackList tr').css({
+			'height' : '10px'
+		});
+		$('#attackList tr:odd').css({
 			'background-color' : '#c0c0c0'
 		});
 	}
