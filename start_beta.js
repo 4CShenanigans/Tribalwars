@@ -67,6 +67,9 @@ $(function() {
 		$('#buttons button').css({
 			'width' : '100px'
 		});
+		$('#buttons p').css({
+			'width' : '100px'
+		});
 		$('#unitTable').css({
 			'margin-left' : '300px'
 		});
