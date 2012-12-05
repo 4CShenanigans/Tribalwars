@@ -197,8 +197,8 @@ $(function() {
 			$('#template_position').val(attackTemplates[id].position);
 		} else {
 			templAttackId.val();
-			$('#template_name').val();
-			$('#template_coords').val();
+			$('#template_name').val('');
+			$('#template_coords').val('');
 			$('#template_position').val(0);
 			for (unitType in unitTypes) {
 				$('#template_' + unitType).val(0);
