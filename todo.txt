@@ -3,9 +3,14 @@ ToDo:
 supress autorefresh while attacking
 integrate zomgtw tools
 
+filter reports
+auto adjust atacks
+
 done:
 
 move to github
 move html to external file
 add reset villagecount
 replace cookies with localstorage
+add attack templates
+enable infinity cycling
