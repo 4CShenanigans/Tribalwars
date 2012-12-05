@@ -1,6 +1,8 @@
 ToDo:
 
 supress autorefresh while attacking
+define a royal guard that stays home and isn't used for raiding
+full bot mode, continue attack as soon as enough troops are available
 integrate zomgtw tools
 
 filter reports
