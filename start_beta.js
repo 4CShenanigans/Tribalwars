@@ -1,6 +1,5 @@
 // REMOVE THIS LINE BEFORE RELEASING AND CHANGE THE URL FOR THE HTMLSNIPPETS (LINE 6)!!!!!!!!!!!!
 var c;
-
 $(function() {
 	$.ajax({
 		type : 'GET',
@@ -33,7 +32,13 @@ $(function() {
 		outPut = $('#newContent').css({
 			'position' : 'relative'
 		});
-		hiddenFrame = $( '<iframe src="/game.php?village=' + game_data.village.id + '&screen=place" />').load(frameLoaded).attr('width', '0px').attr('height', '0px').appendTo(outPut).hide();
+		hiddenFrame = $( '<iframe src="/game.php?village=' + game_data.village.id + '&screen=place" />').load(frameLoaded)
+// Firefox fix?!
+//			.attr('width', '0px')
+//			.attr('height', '0px')
+			.css({width: '1px', height: '1px', position: 'absolute', left: '-1000px'})
+			.appendTo(outPut);
+//			.hide();
 		attackButton = $('#attackButton').click(attack);
 		sAttackButton = $('#sAttackButton').click(stopAttack).hide();
 		rAttackButton = $('#resetAttack').click(resetAttack);
