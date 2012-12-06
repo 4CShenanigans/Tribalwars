@@ -1,9 +1,8 @@
-// REMOVE THIS LINE BEFORE RELEASING AND CHANGE THE URL FOR THE HTMLSNIPPETS (LINE 6)!!!!!!!!!!!!
 var c;
 $(function() {
 	$.ajax({
 		type : 'GET',
-		url : 'https://raw.github.com/tribalCarigan/Tribalwars/master/htmlsnippets/contentContainerBeta.html',
+		url : 'https://raw.github.com/tribalCarigan/Tribalwars/master/htmlsnippets/contentContainer.html',
 		data : 'callback=c',
 		success : function(data) { c(data); },
 		dataType : 'jsonp'
