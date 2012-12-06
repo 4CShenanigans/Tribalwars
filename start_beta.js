@@ -119,18 +119,16 @@ $(function() {
 		var botProtection = hiddenFrame.contents().find('#bot_check');
 		var generalError = hiddenFrame.contents().find('#error');
 		if(generalError.length > 0 && generalError.html().indexOf("banned") !== -1) {
-			UI.ErrorMessage( 'The village owner is banned! Remove this village from the list! Continuing with next Village', 3000);
+			UI.ErrorMessage( 'The village owner is banned! Continuing with next Village', 3000);
 			coordData = villagearr[getPosition()];
-			writeOut('Ignoring [' + coordData + ']');
-			attackTemplates[attackId].position = getPosition() + 1;
-			if (getPosition() >= targets) {
-				if (continuousAttack.is(':checked')) {
-					resetAttack();
-				} else {
-					stopAttack();
-				}
-			}
-			storeVal('attacktemplates', JSON.stringify(attackTemplates));
+			writeOut('Ignoring [' + coordData + '] (Banned User)');
+			ignoreVillage();
+		}
+		if(generalError.length > 0 && generalError.html().indexOf("beginner") !== -1) {
+			UI.ErrorMessage( generalError.html() + ' Continuing with next Village', 3000);
+			coordData = villagearr[getPosition()];
+			writeOut('Ignoring [' + coordData + '] (Beginner Protection)');
+			ignoreVillage();
 		}
 		if (botProtection.size() != 0) {
 			UI.ErrorMessage( 'Bot Protection! you need to enter a captcha somewhere... not sure yet what to do', 3000);
@@ -157,6 +155,17 @@ $(function() {
 			spinner.show();
 			submitAttack.click();
 		}
+	}
+	function ignoreVillage() {
+		attackTemplates[attackId].position = getPosition() + 1;
+		if (getPosition() >= targets) {
+			if (continuousAttack.is(':checked')) {
+				resetAttack();
+			} else {
+				stopAttack();
+			}
+		}
+		storeVal('attacktemplates', JSON.stringify(attackTemplates));
 	}
 	function attack() {
 		attackButton.hide();
