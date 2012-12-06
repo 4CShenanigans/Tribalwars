@@ -1,8 +1,9 @@
+// !!!!!!!!!!!!!!!!!!!!Remove this line and change the html url in line 6 !!!!!!!!!!!!!!!!!!!!
 var c;
 $(function() {
 	$.ajax({
 		type : 'GET',
-		url : 'https://raw.github.com/tribalCarigan/Tribalwars/master/htmlsnippets/contentContainer.html',
+		url : 'https://raw.github.com/tribalCarigan/Tribalwars/master/htmlsnippets/contentContainerBeta.html',
 		data : 'callback=c',
 		success : function(data) { c(data); },
 		dataType : 'jsonp'
@@ -133,6 +134,9 @@ $(function() {
 		}
 		if (botProtection.size() != 0) {
 			UI.ErrorMessage( 'Bot Protection! you need to enter a captcha somewhere... not sure yet what to do', 3000);
+			var captcha = hiddenFrame.contents().find('#bot_check_image');
+			var input = hiddenFrame.contents().find('#bot_check_code');
+			var submit = hiddenFrame.contents().find('#bot_check_submit');
 		}
 		if (submitAttack.size() == 0) {
 			loadAttack(attackId);
@@ -304,8 +308,11 @@ $(function() {
 	}
 
 	function removeAttack(id) {
-		// TODO: add behaviour for deleting the active template
 		delete attackTemplates[id];
+		if(attackId == id) {
+			// load now first entry in the list
+			loadAttack();
+		}
 		storeVal('attacktemplates', JSON.stringify(attackTemplates));
 		populateAttackList();
 	}
@@ -313,12 +320,14 @@ $(function() {
 		// reset the list just to be sure
 		attackList.children().remove();
 		for ( var templId in attackTemplates) {
-			var item = $('<tr><td>' + attackTemplates[templId].name + '</td></tr>').appendTo(attackList);
+			var item = $('<tr/>').appendTo(attackList);
 			$('<td title="Load this attack" />').html('L').bind('click', { attack : templId }, function(event) { loadAttack(event.data.attack); }).css({
 				'width' : '10px',
 				'cursor' : 'pointer',
-				'color' : '#0f0'
+				'color' : '#00f',
+				'background-color' : '#fff'
 			}).appendTo(item);
+			$('<td>' + attackTemplates[templId].name + '</td>').appendTo(item);
 			$('<td title="Remove this attack (CAN NOT BE UNDONE)" />').html('X').bind('click', { attack : templId }, function(event) { removeAttack(event.data.attack); }).css({
 				'width' : '10px',
 				'cursor' : 'pointer',
