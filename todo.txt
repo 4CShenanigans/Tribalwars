@@ -1,5 +1,6 @@
 ToDo:
 define a royal guard that stays home and isn't used for raiding
+bot over all villages?
 integrate zomgtw tools
 
 filter reports

@@ -187,10 +187,12 @@ $(function() {
 			ignoreVillage();
 		}
 		if (botProtection.size() != 0) {
-			UI.ErrorMessage( 'Bot Protection! you need to enter a captcha somewhere... not sure yet what to do yet', 3000);
+			UI.ErrorMessage( 'Bot Protection! you need to enter a captcha somewhere... not sure yet what to do yet<br />Disabling botmode for now!', 3000);
+			writeOut('Bot Protection! you need to enter a captcha somewhere... not sure yet what to do yet<br />Disabling botmode for now!');
 			var captcha = hiddenFrame.contents().find('#bot_check_image');
 			var input = hiddenFrame.contents().find('#bot_check_code');
 			var submit = hiddenFrame.contents().find('#bot_check_submit');
+			botting.attr('checked', false);
 		}
 		if (submitAttack.size() == 0) {
 			loadAttack(attackId);
