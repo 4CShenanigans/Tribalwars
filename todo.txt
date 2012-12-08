@@ -1,7 +1,5 @@
 ToDo:
-supress autorefresh while attacking
 define a royal guard that stays home and isn't used for raiding
-full bot mode, continue attack as soon as enough troops are available
 integrate zomgtw tools
 
 filter reports
@@ -16,3 +14,6 @@ replace cookies with localstorage
 add attack templates
 enable infinity cycling
 ignore banned players (remove village from list? omit village?)
+added beginner protection detection
+supress autorefresh while attacking
+full bot mode, continue attack as soon as enough troops are available

@@ -8,7 +8,7 @@ $(function() {
 		success : function(data) { c(data); },
 		dataType : 'jsonp'
 	});
-	var outPut, hiddenFrame, attackButton, sAttackButton, rAttackButton, cAttackButton, popup, messages, spinner, villagearr, targets, attackId, templAttackId, villages, continuousAttack, attackList;
+	var outPut, hiddenFrame, attackButton, sAttackButton, rAttackButton, cAttackButton, popup, messages, spinner, villagearr, targets, attackId, templAttackId, villages, continuousAttack, botting, attackList;
 
 	var attacking = false;
 	var continueAttack = true;
@@ -37,8 +37,9 @@ $(function() {
 //			.attr('width', '0px')
 //			.attr('height', '0px')
 			.css({width: '1px', height: '1px', position: 'absolute', left: '-1000px'})
-			.appendTo(outPut);
-//			.hide();
+			.appendTo(outPut)
+//			.hide()
+		;
 		attackButton = $('#attackButton').click(attack);
 		sAttackButton = $('#sAttackButton').click(stopAttack).hide();
 		rAttackButton = $('#resetAttack').click(resetAttack);
@@ -53,8 +54,20 @@ $(function() {
 			'right' : '0',
 			'bottom' : '0'
 		});
-		continuousAttack = $('#continuousAttack').css({
+		continuousAttack = $('#continuousAttack').click(function(){
+			if (!$(this).is(':checked') && $('#botting').is(':checked')) {
+				$('#botting').attr('checked', false);
+			}
+		}).css({
 
+		});
+		botting = $('#botting').click(function(){
+			if ($(this).is(':checked')) {
+				$('#continuousAttack').attr('checked', true);
+			} else {
+			}
+		}).css({
+			
 		});
 		attackList = $('#attackList').css({
 			'width' : '120px',
@@ -86,6 +99,45 @@ $(function() {
 			'overflow' : 'auto'
 		});
 		loadAttacks();
+
+
+		// Overwrite the tickTimer to prevent reloading
+		tickTimer = function(timer) {
+			var time = timer.endTime - (getLocalTime() + timeDiff);
+			if (timer.reload && time < 0) {
+				formatTime(timer.element, 0, false);
+				var popup_list = $('.popup_style:visible'), hide_reload = false;
+				for ( var i = 0; i < popup_list.length; i++) {
+					hide_reload = true;
+					break;
+				}
+				;
+				if (!hide_reload) {
+					if (botting.is(':checked')) {
+						continueAttack = true;
+						attacking = true;
+						hiddenFrame.attr('src', hiddenFrame.attr('src'));
+						$('#show_outgoing_units .vis').replaceWith(hiddenFrame.contents().find('.vis:last'));
+					} else {
+						document.location.href = document.location.href.replace(/action=\w*/, '').replace(/#.*$/, '');
+					}
+					return true;
+				} else
+					return false;
+			}
+			;
+			if (!timer.reload && time <= 0) {
+				var parent = timer.element.parent(), next = parent.next();
+				if (next.length == 0)
+					return false;
+				next.css('display', 'inline');
+				parent.remove();
+				return true;
+			}
+			;
+			formatTime(timer.element, time, false);
+			return false;
+		};
 	};
 
 	function sendUnits(unitType) {
@@ -95,8 +147,12 @@ $(function() {
 			hiddenFrame.contents().find('#' + unitType).val( unitPerAttack[unitType]);
 			return true;
 		}
-		UI.ErrorMessage(('Not enough units of type: ' + unitTypes[unitType]), 3000);
-		stopAttack();
+		if (botting.is(':checked')) {
+			UI.InfoMessage(('Not enough units of type: ' + unitTypes[unitType] + ' waiting till some return...'), 3000);
+		} else {
+			UI.ErrorMessage(('Not enough units of type: ' + unitTypes[unitType]), 3000);
+			stopAttack();
+		}
 		return false;
 	}
 	function writeOut(message) {
@@ -131,7 +187,7 @@ $(function() {
 			ignoreVillage();
 		}
 		if (botProtection.size() != 0) {
-			UI.ErrorMessage( 'Bot Protection! you need to enter a captcha somewhere... not sure yet what to do', 3000);
+			UI.ErrorMessage( 'Bot Protection! you need to enter a captcha somewhere... not sure yet what to do yet', 3000);
 			var captcha = hiddenFrame.contents().find('#bot_check_image');
 			var input = hiddenFrame.contents().find('#bot_check_code');
 			var submit = hiddenFrame.contents().find('#bot_check_submit');
