@@ -8,10 +8,13 @@ $(function() {
 		success : function(data) { c(data); },
 		dataType : 'jsonp'
 	});
-	var outPut, hiddenFrame, attackButton, sAttackButton, rAttackButton, cAttackButton, popup, messages, spinner, villagearr, targets, attackId, templAttackId, villages, continuousAttack, botting, attackList;
+	var outPut, hiddenFrame, attackButton, sAttackButton, rAttackButton, cAttackButton, popup, messages, spinner, villagearr, targets, attackId, templAttackId, villages, continuousAttack, botting, attackList, activeInterval,tmptimers;
 
 	var attacking = false;
 	var continueAttack = true;
+	var timersAvailable = false;
+	var timerOff = false;
+	var intervalSet = false;
 	var attackTemplates = {};
 	var unitPerAttack = [];
 	var unitTypes = {
@@ -28,6 +31,7 @@ $(function() {
 	};
 	c = function(data) {
 		$(data.htmlSnippet).insertBefore('#contentContainer');
+		timersAvailable = timers.length > 0;
 		popup = $(data.popup).appendTo('body').hide();
 		outPut = $('#newContent').css({
 			'position' : 'relative'
@@ -57,6 +61,7 @@ $(function() {
 		continuousAttack = $('#continuousAttack').click(function(){
 			if (!$(this).is(':checked') && $('#botting').is(':checked')) {
 				$('#botting').attr('checked', false);
+				toggleTimer();
 			}
 		}).css({
 
@@ -66,6 +71,7 @@ $(function() {
 				$('#continuousAttack').attr('checked', true);
 			} else {
 			}
+			toggleTimer();
 		}).css({
 			
 		});
@@ -100,43 +106,26 @@ $(function() {
 		});
 		loadAttacks();
 
-
-		// Overwrite the tickTimer to prevent reloading
-		tickTimer = function(timer) {
-			var time = timer.endTime - (getLocalTime() + timeDiff);
-			if (timer.reload && time < 0) {
-				formatTime(timer.element, 0, false);
-				var popup_list = $('.popup_style:visible'), hide_reload = false;
-				for ( var i = 0; i < popup_list.length; i++) {
-					hide_reload = true;
-					break;
-				}
-				;
-				if (!hide_reload) {
-					if (botting.is(':checked')) {
-						continueAttack = true;
-						attacking = true;
-						hiddenFrame.attr('src', hiddenFrame.attr('src'));
-						$('#show_outgoing_units .vis').replaceWith(hiddenFrame.contents().find('.vis:last'));
-					} else {
-						document.location.href = document.location.href.replace(/action=\w*/, '').replace(/#.*$/, '');
-					}
-					return true;
-				} else
-					return false;
+		toggleTimer = function() {
+			if(!timersAvailable) {
+				timerOff = true;
+				return;
 			}
-			;
-			if (!timer.reload && time <= 0) {
-				var parent = timer.element.parent(), next = parent.next();
-				if (next.length == 0)
-					return false;
-				next.css('display', 'inline');
-				parent.remove();
-				return true;
+			if(timers.length>0){
+				timerOff = true;
+				tmptimers=timers;
+				timers=[];
+			} else {
+				timers=tmptimers;
+				timerOff = false;
 			}
-			;
-			formatTime(timer.element, time, false);
-			return false;
+		};
+		
+		polling = function() {
+			continueAttack = true;
+			attacking = true;
+			hiddenFrame.attr('src', hiddenFrame.attr('src'));
+			$('#show_outgoing_units .vis').replaceWith(hiddenFrame.contents().find('.vis:last'));
 		};
 	};
 
@@ -193,6 +182,7 @@ $(function() {
 			var input = hiddenFrame.contents().find('#bot_check_code');
 			var submit = hiddenFrame.contents().find('#bot_check_submit');
 			botting.attr('checked', false);
+			stopAttack();
 		}
 		if (submitAttack.size() == 0) {
 			loadAttack(attackId);
@@ -226,6 +216,10 @@ $(function() {
 		storeVal('attacktemplates', JSON.stringify(attackTemplates));
 	}
 	function attack() {
+		if(timerOff && !intervalSet) {
+			activeInterval = window.setInterval(polling, 5000);
+			intervalSet = true;
+		}
 		attackButton.hide();
 		sAttackButton.show();
 		coordData = villagearr[getPosition()];
@@ -249,6 +243,10 @@ $(function() {
 		return parseInt(attackTemplates[attackId].position);
 	}
 	function stopAttack() {
+		if(timerOff) {
+			window.clearInterval(activeInterval);
+			intervalSet = false;
+		}
 		attackButton.show();
 		sAttackButton.hide();
 		attacking = false;
@@ -261,7 +259,7 @@ $(function() {
 	function resetAttack(fullCycle) {
 		if (!fullCycle) UI.SuccessMessage("Resetting to first Coords.", 3000);
 		attackTemplates[attackId].position = 0;
-		$('#attackedVillages').val(getPosition());
+		$('#attackedVillages').val(getPosition() + 1);
 		storeVal('attacktemplates', JSON.stringify(attackTemplates));
 	}
 	function showAttackTemplate(id) {
@@ -368,7 +366,7 @@ $(function() {
 		villages = attack.coords;
 		villagearr = villages.split(" ");
 		targets = villagearr.length;
-		$('#attackedVillages').val(getPosition());
+		$('#attackedVillages').val(getPosition() + 1);
 		$('#amount_of_attackedVillages').html(targets);
 		showAttack();
 		return attack;
