@@ -14,7 +14,6 @@ $(function() {
 	var continueAttack = true;
 	var timersAvailable = false;
 	var timerOff = false;
-	var intervalSet = false;
 	var attackTemplates = {};
 	var unitPerAttack = [];
 	var unitTypes = {
@@ -216,10 +215,6 @@ $(function() {
 		storeVal('attacktemplates', JSON.stringify(attackTemplates));
 	}
 	function attack() {
-		if(timerOff && !intervalSet) {
-			activeInterval = window.setInterval(polling, 5000);
-			intervalSet = true;
-		}
 		attackButton.hide();
 		sAttackButton.show();
 		coordData = villagearr[getPosition()];
@@ -237,16 +232,19 @@ $(function() {
 			attacking = true;
 			spinner.show();
 			writeOut('Attacking: [' + coordData + ']');
+			return;
+		}
+		if(timerOff && botting.is(':checked')) {
+			var nextAttackInSeconds = hiddenFrame.contents().find('table.vis:last tr td:contains("Return"):first').siblings().next().first().find('span').html().split(':');
+			nextAttackInSeconds = parseInt(nextAttackInSeconds[0] * 3600) + parseInt(nextAttackInSeconds[1] * 60) + parseInt(nextAttackInSeconds[2]);
+			writeOut('Next return in ' + nextAttackInSeconds + ' Seconds');
+			activeInterval = window.setTimeout(polling, nextAttackInSeconds * 1000 + 1);
 		}
 	}
 	function getPosition() {
 		return parseInt(attackTemplates[attackId].position);
 	}
 	function stopAttack() {
-		if(timerOff) {
-			window.clearInterval(activeInterval);
-			intervalSet = false;
-		}
 		attackButton.show();
 		sAttackButton.hide();
 		attacking = false;
