@@ -240,7 +240,7 @@ $(function() {
 			if(returningAttack != null) {
 				timeContainer = returningAttack;
 			} else {
-				timeContainer = hiddenFrame.contents().find('table.vis:contains("Own") tr td:contains("Attack"):first').siblings().next().first().find('span.time').html();
+				timeContainer = hiddenFrame.contents().find('table.vis:contains("Own") tr td:contains("Attack"):first').siblings().next().first().find('span.timer').html();
 			}
 			var nextAttackInSeconds = timeContainer.split(':');
 			nextAttackInSeconds = parseInt(nextAttackInSeconds[0] * 3600) + parseInt(nextAttackInSeconds[1] * 60) + parseInt(nextAttackInSeconds[2]);
