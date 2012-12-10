@@ -235,7 +235,14 @@ $(function() {
 			return;
 		}
 		if(timerOff && botting.is(':checked')) {
-			var nextAttackInSeconds = hiddenFrame.contents().find('table.vis:last tr td:contains("Return"):first').siblings().next().first().find('span').html().split(':');
+			var returningAttack = hiddenFrame.contents().find('table.vis:contains("Own") tr td:contains("Return"):first').siblings().next().first().find('span').html();
+			var timeContainer = [];
+			if(returningAttack != null) {
+				timeContainer = returningAttack;
+			} else {
+				timeContainer = hiddenFrame.contents().find('table.vis:contains("Own") tr td:contains("Attack"):first').siblings().next().first().find('span.time').html();
+			}
+			var nextAttackInSeconds = timeContainer.split(':');
 			nextAttackInSeconds = parseInt(nextAttackInSeconds[0] * 3600) + parseInt(nextAttackInSeconds[1] * 60) + parseInt(nextAttackInSeconds[2]);
 			writeOut('Next return in ' + nextAttackInSeconds + ' Seconds');
 			activeInterval = window.setTimeout(polling, nextAttackInSeconds * 1000 + 1);
