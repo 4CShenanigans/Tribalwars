@@ -83,6 +83,10 @@ $(function() {
 		}).css({
 			
 		});
+		$('#buttons label').css({
+			'width': '78px',
+			'display': 'inline-block'
+		});
 		attackList = $('#attackList').css({
 			'width' : '120px',
 			'float' : 'right',
