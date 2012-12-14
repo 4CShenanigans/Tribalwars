@@ -74,7 +74,7 @@ $(function() {
 		}).css({
 			
 		});
-		ignorePlayers = $('#botting').click(function(){
+		ignorePlayers = $('#ignorePlayers').click(function(){
 			if ($(this).is(':checked')) {
 				writeOut('Ignoring player villages: [ON]');
 			} else {
