@@ -1,6 +1,7 @@
 ToDo:
 define a royal guard that stays home and isn't used for raiding
 bot over all villages?
+support feature
 integrate zomgtw tools
 
 filter reports
@@ -18,3 +19,4 @@ ignore banned players (remove village from list? omit village?)
 added beginner protection detection
 supress autorefresh while attacking
 full bot mode, continue attack as soon as enough troops are available
+add possibility to ignore player villages

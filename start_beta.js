@@ -8,7 +8,7 @@ $(function() {
 		success : function(data) { c(data); },
 		dataType : 'jsonp'
 	});
-	var outPut, hiddenFrame, attackButton, sAttackButton, rAttackButton, cAttackButton, popup, messages, spinner, villagearr, targets, attackId, templAttackId, villages, continuousAttack, botting, attackList, activeInterval,tmptimers;
+	var outPut, hiddenFrame, attackButton, sAttackButton, rAttackButton, cAttackButton, popup, messages, spinner, villagearr, targets, attackId, templAttackId, villages, continuousAttack, botting, ignorePlayers, attackList, activeInterval,tmptimers;
 
 	var attacking = false;
 	var continueAttack = true;
@@ -74,6 +74,15 @@ $(function() {
 		}).css({
 			
 		});
+		ignorePlayers = $('#botting').click(function(){
+			if ($(this).is(':checked')) {
+				writeOut('Ignoring player villages: [ON]');
+			} else {
+				writeOut('Ignoring player villages: [OFF]');
+			}
+		}).css({
+			
+		});
 		attackList = $('#attackList').css({
 			'width' : '120px',
 			'float' : 'right',
@@ -124,7 +133,7 @@ $(function() {
 			continueAttack = true;
 			attacking = true;
 			hiddenFrame.attr('src', hiddenFrame.attr('src'));
-			$('#show_outgoing_units .vis').replaceWith(hiddenFrame.contents().find('.vis:last'));
+			$('#show_outgoing_units .vis').replaceWith(hiddenFrame.contents().find('table.vis:contains("Own")'));
 		};
 	};
 
@@ -162,6 +171,7 @@ $(function() {
 		var submitAttack = hiddenFrame.contents().find('#troop_confirm_go');
 		var botProtection = hiddenFrame.contents().find('#bot_check');
 		var generalError = hiddenFrame.contents().find('#error');
+		var playerVillage = hiddenFrame.contents().find('table.vis td:contains("Player")');
 		if(generalError.length > 0 && generalError.html().indexOf("banned") !== -1) {
 			UI.ErrorMessage( 'The village owner is banned! Continuing with next Village', 3000);
 			coordData = villagearr[getPosition()];
@@ -182,6 +192,12 @@ $(function() {
 			var submit = hiddenFrame.contents().find('#bot_check_submit');
 			botting.attr('checked', false);
 			stopAttack();
+		}
+		if(playerVillage.length > 0 && ignorePlayers.is(':checked')) {
+			UI.ErrorMessage( 'The village owner is a player! Continuing with next Village', 3000);
+			coordData = villagearr[getPosition()];
+			writeOut('Ignoring [' + coordData + '] (player)');
+			ignoreVillage();
 		}
 		if (submitAttack.size() == 0) {
 			loadAttack(attackId);
