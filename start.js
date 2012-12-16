@@ -7,10 +7,12 @@ $(function() {
 		success : function(data) { c(data); },
 		dataType : 'jsonp'
 	});
-	var outPut, hiddenFrame, attackButton, sAttackButton, rAttackButton, cAttackButton, popup, messages, spinner, villagearr, targets, attackId, templAttackId, villages, continuousAttack, attackList;
+	var outPut, hiddenFrame, attackButton, sAttackButton, rAttackButton, cAttackButton, popup, messages, spinner, villagearr, targets, attackId, templAttackId, villages, continuousAttack, botting, ignorePlayers, attackList, activeInterval,tmptimers;
 
 	var attacking = false;
 	var continueAttack = true;
+	var timersAvailable = false;
+	var timerOff = false;
 	var attackTemplates = {};
 	var unitPerAttack = [];
 	var unitTypes = {
@@ -27,6 +29,7 @@ $(function() {
 	};
 	c = function(data) {
 		$(data.htmlSnippet).insertBefore('#contentContainer');
+		timersAvailable = timers.length > 0;
 		popup = $(data.popup).appendTo('body').hide();
 		outPut = $('#newContent').css({
 			'position' : 'relative'
@@ -36,8 +39,9 @@ $(function() {
 //			.attr('width', '0px')
 //			.attr('height', '0px')
 			.css({width: '1px', height: '1px', position: 'absolute', left: '-1000px'})
-			.appendTo(outPut);
-//			.hide();
+			.appendTo(outPut)
+//			.hide()
+		;
 		attackButton = $('#attackButton').click(attack);
 		sAttackButton = $('#sAttackButton').click(stopAttack).hide();
 		rAttackButton = $('#resetAttack').click(resetAttack);
@@ -52,8 +56,35 @@ $(function() {
 			'right' : '0',
 			'bottom' : '0'
 		});
-		continuousAttack = $('#continuousAttack').css({
+		continuousAttack = $('#continuousAttack').click(function(){
+			if (!$(this).is(':checked') && $('#botting').is(':checked')) {
+				$('#botting').attr('checked', false);
+				toggleTimer();
+			}
+		}).css({
 
+		});
+		botting = $('#botting').click(function(){
+			if ($(this).is(':checked')) {
+				$('#continuousAttack').attr('checked', true);
+			} else {
+			}
+			toggleTimer();
+		}).css({
+			
+		});
+		ignorePlayers = $('#ignorePlayers').click(function(){
+			if ($(this).is(':checked')) {
+				writeOut('Ignoring player villages: [ON]');
+			} else {
+				writeOut('Ignoring player villages: [OFF]');
+			}
+		}).css({
+			
+		});
+		$('#buttons label').css({
+			'width': '78px',
+			'display': 'inline-block'
 		});
 		attackList = $('#attackList').css({
 			'width' : '120px',
@@ -85,6 +116,28 @@ $(function() {
 			'overflow' : 'auto'
 		});
 		loadAttacks();
+
+		toggleTimer = function() {
+			if(!timersAvailable) {
+				timerOff = true;
+				return;
+			}
+			if(timers.length>0){
+				timerOff = true;
+				tmptimers=timers;
+				timers=[];
+			} else {
+				timers=tmptimers;
+				timerOff = false;
+			}
+		};
+		
+		polling = function() {
+			continueAttack = true;
+			attacking = true;
+			hiddenFrame.attr('src', hiddenFrame.attr('src'));
+			$('#show_outgoing_units .vis').replaceWith(hiddenFrame.contents().find('table.vis:contains("Own")'));
+		};
 	};
 
 	function sendUnits(unitType) {
@@ -94,8 +147,12 @@ $(function() {
 			hiddenFrame.contents().find('#' + unitType).val( unitPerAttack[unitType]);
 			return true;
 		}
-		UI.ErrorMessage(('Not enough units of type: ' + unitTypes[unitType]), 3000);
-		stopAttack();
+		if (botting.is(':checked')) {
+			UI.InfoMessage(('Not enough units of type: ' + unitTypes[unitType] + ' waiting till some return...'), 3000);
+		} else {
+			UI.ErrorMessage(('Not enough units of type: ' + unitTypes[unitType]), 3000);
+			stopAttack();
+		}
 		return false;
 	}
 	function writeOut(message) {
@@ -117,6 +174,7 @@ $(function() {
 		var submitAttack = hiddenFrame.contents().find('#troop_confirm_go');
 		var botProtection = hiddenFrame.contents().find('#bot_check');
 		var generalError = hiddenFrame.contents().find('#error');
+		var playerVillage = hiddenFrame.contents().find('table.vis td:contains("Player")');
 		if(generalError.length > 0 && generalError.html().indexOf("banned") !== -1) {
 			UI.ErrorMessage( 'The village owner is banned! Continuing with next Village', 3000);
 			coordData = villagearr[getPosition()];
@@ -130,10 +188,19 @@ $(function() {
 			ignoreVillage();
 		}
 		if (botProtection.size() != 0) {
-			UI.ErrorMessage( 'Bot Protection! you need to enter a captcha somewhere... not sure yet what to do', 3000);
+			UI.ErrorMessage( 'Bot Protection! you need to enter a captcha somewhere... not sure yet what to do yet<br />Disabling botmode for now!', 3000);
+			writeOut('Bot Protection! you need to enter a captcha somewhere... not sure yet what to do yet<br />Disabling botmode for now!');
 			var captcha = hiddenFrame.contents().find('#bot_check_image');
 			var input = hiddenFrame.contents().find('#bot_check_code');
 			var submit = hiddenFrame.contents().find('#bot_check_submit');
+			botting.attr('checked', false);
+			stopAttack();
+		}
+		if(playerVillage.length > 0 && ignorePlayers.is(':checked')) {
+			UI.ErrorMessage( 'The village owner is a player! Continuing with next Village', 3000);
+			coordData = villagearr[getPosition()];
+			writeOut('Ignoring [' + coordData + '] (player)');
+			ignoreVillage();
 		}
 		if (submitAttack.size() == 0) {
 			loadAttack(attackId);
@@ -184,6 +251,20 @@ $(function() {
 			attacking = true;
 			spinner.show();
 			writeOut('Attacking: [' + coordData + ']');
+			return;
+		}
+		if(timerOff && botting.is(':checked')) {
+			var returningAttack = hiddenFrame.contents().find('table.vis:contains("Own") tr td:contains("Return"):first').siblings().next().first().find('span').html();
+			var timeContainer = [];
+			if(returningAttack != null) {
+				timeContainer = returningAttack;
+			} else {
+				timeContainer = hiddenFrame.contents().find('table.vis:contains("Own") tr td:contains("Attack"):first').siblings().next().first().find('span.timer').html();
+			}
+			var nextAttackInSeconds = timeContainer.split(':');
+			nextAttackInSeconds = parseInt(nextAttackInSeconds[0] * 3600) + parseInt(nextAttackInSeconds[1] * 60) + parseInt(nextAttackInSeconds[2]);
+			writeOut('Next return in ' + nextAttackInSeconds + ' Seconds');
+			activeInterval = window.setTimeout(polling, nextAttackInSeconds * 1000 + 1);
 		}
 	}
 	function getPosition() {
@@ -202,7 +283,7 @@ $(function() {
 	function resetAttack(fullCycle) {
 		if (!fullCycle) UI.SuccessMessage("Resetting to first Coords.", 3000);
 		attackTemplates[attackId].position = 0;
-		$('#attackedVillages').val(getPosition());
+		$('#attackedVillages').val(getPosition() + 1);
 		storeVal('attacktemplates', JSON.stringify(attackTemplates));
 	}
 	function showAttackTemplate(id) {
@@ -309,7 +390,7 @@ $(function() {
 		villages = attack.coords;
 		villagearr = villages.split(" ");
 		targets = villagearr.length;
-		$('#attackedVillages').val(getPosition());
+		$('#attackedVillages').val(getPosition() + 1);
 		$('#amount_of_attackedVillages').html(targets);
 		showAttack();
 		return attack;
