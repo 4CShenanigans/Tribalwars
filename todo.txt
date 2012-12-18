@@ -1,6 +1,8 @@
 ToDo:
+check the users feature
+make users feature template specific
 define a royal guard that stays home and isn't used for raiding
-bot over all villages?
+bot over all villages? run several templates from one instance/tab
 support feature
 integrate zomgtw tools
 

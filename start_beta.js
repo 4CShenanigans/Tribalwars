@@ -8,8 +8,8 @@ $(function() {
 		success : function(data) { c(data); },
 		dataType : 'jsonp'
 	});
-	var outPut, hiddenFrame, attackButton, sAttackButton, rAttackButton, cAttackButton, popup, messages, spinner, villagearr, targets, attackId, templAttackId, villages, continuousAttack, botting, ignorePlayers, attackList, activeInterval,tmptimers;
-
+	var outPut, hiddenFrame, hiddenFrameUrl, attackButton, sAttackButton, rAttackButton, cAttackButton, popup, messages, spinner, villagearr, targets, attackId, templAttackId, villages, continuousAttack, botting, ignorePlayers, attackList, activeInterval,tmptimers;
+	
 	var attacking = false;
 	var continueAttack = true;
 	var timersAvailable = false;
@@ -17,25 +17,26 @@ $(function() {
 	var attackTemplates = {};
 	var unitPerAttack = [];
 	var unitTypes = {
-		'unit_input_spear' : 'Spears',
-		'unit_input_sword' : 'Swords',
-		'unit_input_axe'   : 'Olafs',
-		'unit_input_spy'   : 'Scouts',
-		'unit_input_light' : 'LC',
-		'unit_input_heavy' : 'HC',
-		'unit_input_ram'   : 'Rams',
-		'unit_input_catapult' : 'Catas',
-		'unit_input_knight': 'Palas',
-		'unit_input_snob'  : 'Nobles'
+			'unit_input_spear' : 'Spears',
+			'unit_input_sword' : 'Swords',
+			'unit_input_axe'   : 'Olafs',
+			'unit_input_spy'   : 'Scouts',
+			'unit_input_light' : 'LC',
+			'unit_input_heavy' : 'HC',
+			'unit_input_ram'   : 'Rams',
+			'unit_input_catapult' : 'Catas',
+			'unit_input_knight': 'Palas',
+			'unit_input_snob'  : 'Nobles'
 	};
 	c = function(data) {
+		hiddenFrameUrl = '/game.php?village=' + game_data.village.id + '&screen=place';
 		$(data.htmlSnippet).insertBefore('#contentContainer');
 		timersAvailable = timers.length > 0;
 		popup = $(data.popup).appendTo('body').hide();
 		outPut = $('#newContent').css({
 			'position' : 'relative'
 		});
-		hiddenFrame = $( '<iframe src="/game.php?village=' + game_data.village.id + '&screen=place" />').load(frameLoaded)
+		hiddenFrame = $( '<iframe src="' + hiddenFrameUrl + '" />').load(frameLoaded)
 // Firefox fix?!
 //			.attr('width', '0px')
 //			.attr('height', '0px')
@@ -180,13 +181,13 @@ $(function() {
 			UI.ErrorMessage( 'The village owner is banned! Continuing with next Village', 3000);
 			coordData = villagearr[getPosition()];
 			writeOut('Ignoring [' + coordData + '] (Banned User)');
-			ignoreVillage();
+			return ignoreVillage();
 		}
 		if(generalError.length > 0 && generalError.html().indexOf("beginner") !== -1) {
 			UI.ErrorMessage( generalError.html() + ' Continuing with next Village', 3000);
 			coordData = villagearr[getPosition()];
 			writeOut('Ignoring [' + coordData + '] (Beginner Protection)');
-			ignoreVillage();
+			return ignoreVillage();
 		}
 		if (botProtection.size() != 0) {
 			UI.ErrorMessage( 'Bot Protection! you need to enter a captcha somewhere... not sure yet what to do yet<br />Disabling botmode for now!', 3000);
@@ -201,7 +202,7 @@ $(function() {
 			UI.ErrorMessage( 'The village owner is a player! Continuing with next Village', 3000);
 			coordData = villagearr[getPosition()];
 			writeOut('Ignoring [' + coordData + '] (player)');
-			ignoreVillage();
+			return ignoreVillage();
 		}
 		if (submitAttack.size() == 0) {
 			loadAttack(attackId);
@@ -233,6 +234,7 @@ $(function() {
 			}
 		}
 		storeVal('attacktemplates', JSON.stringify(attackTemplates));
+		hiddenFrame.attr('src', hiddenFrameUrl);
 	}
 	function attack() {
 		attackButton.hide();
