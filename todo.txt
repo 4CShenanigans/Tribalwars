@@ -1,5 +1,4 @@
 ToDo:
-check the users feature
 make users feature template specific
 define a royal guard that stays home and isn't used for raiding
 bot over all villages? run several templates from one instance/tab
@@ -22,3 +21,4 @@ added beginner protection detection
 supress autorefresh while attacking
 full bot mode, continue attack as soon as enough troops are available
 add possibility to ignore player villages
+check the users feature

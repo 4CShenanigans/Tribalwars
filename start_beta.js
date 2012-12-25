@@ -189,6 +189,12 @@ $(function() {
 			writeOut('Ignoring [' + coordData + '] (Beginner Protection)');
 			return ignoreVillage();
 		}
+		if(generalError.length > 0 && generalError.html().indexOf("Christmas") !== -1) {
+			UI.ErrorMessage( generalError.html() + ' Continuing with next Village', 3000);
+			coordData = villagearr[getPosition()];
+			writeOut('Ignoring [' + coordData + '] (Christmas...)');
+			return ignoreVillage();
+		}
 		if (botProtection.size() != 0) {
 			UI.ErrorMessage( 'Bot Protection! you need to enter a captcha somewhere... not sure yet what to do yet<br />Disabling botmode for now!', 3000);
 			writeOut('Bot Protection! you need to enter a captcha somewhere... not sure yet what to do yet<br />Disabling botmode for now!');
