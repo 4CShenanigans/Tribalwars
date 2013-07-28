@@ -1,1 +1,978 @@
-eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('E q={2q:B(){r.v.2q();r.F.2q();r.u.2q();r.Z.2q();E j=r.F.2O(\'6b\');C(j==W){r.v.47();q.F.2A(\'6b\',J)}aC.bH.87=B(a,b,c){E d=0;E e=r;E f=26 2J();E g=B(){R e(f,d)};E h=B(){C(c){c(f,d,b)}};E i=B(){d++;C(d<b&&g()!=1t){86.84(i,a)}1J{h()}};i()}},F:{5z:W,38:W,3d:W,2m:W,1S:{},1V:[],1y:{A:0,M:\'\',5i:1t,4j:1t},1d:{},3m:{},3p:\'\',8E:B(d,f,g,h){E i=W,55=W;$.9G({\'3N\':d,\'F\':g,\'aQ\':h,\'I\':bM(f||\'3L\').dy(),\'dX\':1t,\'7O\':B(a,b,e){i=\'ah: \'+b},\'al\':B(a,b,c){55=a}});C(i){r.v.12(i,q.v.1B,J,4F)}R 55},6m:B(a){R $(r.8E(\'/cs.2F\',\'3L\',{\'d4\':a},\'de\')).Y(\'dT\')},6i:B(){R r.6m(\'eb\')},6h:B(){R r.6m(\'a0\')},2q:B(){r.1y=r.2O(\'4q\',J);C(r.1y==W||r.1y.A==0){r.1y={};r.1y.A=29(N.1y.A);r.1y.M=N.1y.M;r.1y.5i=N.1y.5i;r.1y.4j=1t;r.2A(\'4q\',r.1y,J)}C(!r.1y.4j){r.6G()}q.u.1l=r.2j(\'2w\',J);1X.1Y(\'2H?\',q.u.1l);C(q.u.1l==W){1X.1Y(\'5E dP 9p!\');q.u.1l={}}r.1d=r.2O(\'5g\',J);C(r.1d==W||59.58(r.1d).1N==0||59.58(r.1d).1N!=N.1y.1d||r.1d[N.S.A].A==W){C(r.1d==W||59.58(r.1d).1N==0){r.1d={}}r.7H()}r.3m=r.2O(\'6t\',J);C(r.3m==W){r.3m={};r.2A(\'6t\',r.3m,J)}r.3d=r.2O(\'6r\');r.3d=r.6h();C(r.3d==W){r.3d=r.6h();r.2A(\'6r\',r.3d)}r.2m=r.2O(\'6q\');r.2m=r.6i();C(r.2m==W){r.2m=r.6i();r.2A(\'6q\',r.2m)}r.1S=r.2j(\'6p\',J);r.1V=r.2j(\'6o\');C(r.1V!=W){r.1V=r.1V.2h(\' \')}C(r.1S==W||r.1V==W){r.1S={};E c=[];r.1V=[];r.2m.6l().4v(B(a,b){C(b.34==\'69\')R;q.F.1S[\'6z\'+b.34]=q.v.3I(b.34);c[c.1N]={14:b.34,3M:$(b).Y(\'3M\').V()}});c.aa(B(a,b){R 8V(a.3M,10)-8V(b.3M,10)});1a(s 1E c){r.1V[r.1V.1N]=c[s].14}r.2e(\'6p\',r.1S,J);r.2e(\'6o\',r.1V.7r(\' \'))}r.5z=$(\'#6a\').1u().5Z(/\\d+/g);r.38=$(\'#38\').1u().5Z(/\\d+/g);r.6a=26 2J(r.38[1]+\'/\'+r.38[0]+\'/\'+r.38[2]+\' \'+r.5z.7r(\':\'));$(\'#7e\').1m(q.F.73).1A();$(\'#3X\').1m(q.F.3X).1A()},6G:B(){E a=23.2W(N.S.A+\'aj\');C(a!=W){r.2e(\'2w\',a)}r.1y.4j=J;r.2A(\'4q\',r.1y,J)},2e:B(a,b,c){1X.1Y(\'9m 1C 2e [\'+a+\']: [\'+b+\']\',c);C(c){23.4C(N.2a+\'1w\'+N.S.A+\'1w\'+a,3Y.8a(b))}1J{23.4C(N.2a+\'1w\'+N.S.A+\'1w\'+a,b)}},2A:B(a,b,c){C(c){23.4C(N.2a+\'1w\'+a,3Y.8a(b))}1J{23.4C(N.2a+\'1w\'+a,b)}},2j:B(a,b){1X.1Y(\'9m 1C 2j [\'+a+\']\',b);C(b){1X.1Y(\'13 1a [\'+a+\'] : [\'+3Y.5C(23.2W(N.2a+\'1w\'+N.S.A+\'1w\'+a))+\']\');R 3Y.5C(23.2W(N.2a+\'1w\'+N.S.A+\'1w\'+a))}1X.1Y(\'13 1a [\'+a+\'] : [\'+23.2W(N.2a+\'1w\'+N.S.A+\'1w\'+a)+\']\');R 23.2W(N.2a+\'1w\'+N.S.A+\'1w\'+a)},2O:B(a,b){C(b){R 3Y.5C(23.2W(N.2a+\'1w\'+a))}R 23.2W(N.2a+\'1w\'+a)},41:B(a){23.76(N.2a+\'1w\'+N.S.A+\'1w\'+a)},2S:B(a){23.76(N.2a+\'1w\'+a)},7H:B(){q.F.90=\'/2R.2F?S=\'+N.S.A+\'&2Q=7I&4k=\'+24.48();q.F.88=$(\'<6I U="\'+q.F.90+\'" />\').2j(q.F.9z).2b({G:\'4p\',1I:\'4p\',1L:\'3q\',1F:\'-8c\'}).1x(\'2k\')},9z:B(){E d=q.F.88.1r().Y("#9O D w:6g-57(1)");d.Y(\'a\').4v(B(a,e){E b={};E c=$(e).1U(\'5p\').3D(18).2h(\'&\')[0];C(q.F.1d[c]!=W&&q.F.1d[c].A!=W){b=q.F.1d[c]}C(N.S.A==c){b.A=N.S.A;b.6W=N.S.6W;b.78=N.S.78;b.7i=N.S.7i;b.3C=N.S.3C;b.8e=N.S.8e;b.M=N.S.M;b.95=N.S.95;q.v.12("dk 4a dE 1a "+N.S.M,q.v.2r)}q.F.1d[c]=b});q.F.2A(\'5g\',q.F.1d,J)},73:B(){q.F.3p=\'/2R.2F?S=\'+N.S.A+\'&2Q=2V&4k=\'+24.48();q.F.5w=q.v.3w(q.F.3p,q.F.7n)},7n:B(){1X.1Y(\'9K 1C 2j\');E b=q.F.5w.1r().Y(\'#7t\');C(b.1N>0){E c=0;b.Y(\'O[I=2N]:49(.94)\').4v(B(a,e){c=29(e.M.3D(3));q.F.3p=\'/2R.2F?S=\'+N.S.A+\'&ao=\'+c+\'&2Q=2V&4k=\'+24.48();q.v.12(\'ar 2V 3b A [\'+c+\']\',q.v.2l);q.F.5w.1U(\'U\',q.F.3p);1X.1Y(c);R});C(c==0){q.v.12(\'ba bg bn\',q.v.2l);R}}1J{1X.1Y(\'2V 4B!\');1X.1Y(\'6v F\');1X.1Y(\'7a 2V\');q.F.3p=\'/2R.2F?S=\'+N.S.A+\'&bR=4c&7j=d1&h=d2&A=\'+c+\'&2Q=2V&4k=\'+24.48();q.v.12(\'5m 2V 3b A [\'+c+\']\',q.v.2l)}1X.1Y(\'2H d5\')},3X:B(){q.v.12(\'db 4c 7p F!\',q.v.1B,J,4F);q.F.2S(\'6b\');q.F.2S(\'6r\');q.v.12(\'2s dn!\',q.v.1B);q.F.2S(\'4q\');q.v.12(\'2s dq!\',q.v.1B);q.F.2S(\'5g\');q.v.12(\'2s 1d!\',q.v.1B);q.F.2S(\'6t\');q.v.12(\'2s 3m!\',q.v.1B);q.F.2S(\'6q\');q.v.12(\'2s 2m!\',q.v.1B);q.F.41(\'6p\');q.v.12(\'2s 1S!\',q.v.1B);q.F.41(\'6o\');q.v.12(\'2s dw!\',q.v.1B);q.F.41(\'2w\');q.v.12(\'2s 1l!\',q.v.1B);q.v.12(\'2s 4c 7p F! dx 19 7L 2H 7M!\',q.v.1B,J,4F)}},u:{2P:1t,2G:J,21:0,1l:{},2g:[],2q:B(){r.4U=\'/2R.2F?S=\'+N.S.A+\'&2Q=9M\';r.1G=q.v.3w(r.4U,q.u.98);C(q.F.1S.a2==W){r.4f=$(q.3c.6J).1x(\'2k\').1A()}1J{r.4f=$(q.3c.6R).1x(\'2k\').1A()}r.46=$(\'#46\').1m(r.H);r.45=$(\'#45\').1m(r.3k).1A();r.b8=$(\'#2T\').1m(r.2T);r.51=$(\'#51\').1m(B(){q.u.44()});$(\'#5b\').1m(q.u.7q);r.3v=$(\'#5n\');r.2U=$(\'#2U\').1m(B(){C(!$(r).1O(\':1z\')&&$(\'#2t\').1O(\':1z\')){$(\'#2t\').1U(\'1z\',1t);q.v.65()}}).2b({});r.2t=$(\'#2t\').1m(B(){C($(r).1O(\':1z\')){$(\'#2U\').1U(\'1z\',J)}1J{}q.v.65()}).2b({});r.3Z=$(\'#3Z\').1m(B(){C($(r).1O(\':1z\')){q.v.12(\'8B 1y 1d: <1W x="4G">[dp]</1W>\',q.v.2l)}1J{q.v.12(\'8B 1y 1d: <1W x="52">[ds]</1W>\',q.v.2l)}}).2b({});r.2E=$(\'#2E\');r.2L=$(\'#2L\').1U(\'T\',\'dz dB 19 dD 2X dO 2Y: 1m\');r.6U()},6V:B(){q.u.2G=J;q.u.2P=J;q.u.1G.1U(\'U\',q.u.1G.1U(\'U\'));$(\'#e2 .1M\').9C(q.u.1G.1r().Y(\'P.1M:3e("5A")\'))},98:B(){q.v.3f.9Q();E a=q.u.1G.1r().Y(\'#9S\');E b=q.u.1G.1r().Y(\'#9Z\');E c=q.u.1G.1r().Y(\'17[U="/7f.16"]\');E d=q.u.1G.1r().Y(\'#7O\');E e=q.u.1G.1r().Y(\'P.1M w:3e("ad")\');C(d.1N>0&&d.1u().3W("68")!==-1){2c=q.u.2Z[q.u.27()];q.v.12(\'6f S 7F 1O 68! 4L 3b 3i 4a (6x [\'+2c+\'])\',q.v.1B,J,3V);R q.u.3T()}C(d.1N>0&&d.1u().3W("bF")!==-1){2c=q.u.2Z[q.u.27()];q.v.12(d.1u()+\' 4L 3b 3i 4a (6x [\'+2c+\'])\',q.v.1B,J,3V);R q.u.3T()}C(d.1N>0&&d.1u().3W("bG")!==-1){2c=q.u.2Z[q.u.27()];q.v.12(d.1u()+\' 4L 3b 3i 4a (6x [\'+2c+\'])\',q.v.1B,J,3V);R q.u.3T()}C(b.3l()!=0||c.3l()!=0){q.v.12(\'8d bQ! 2u bS 1C c0 a c1 c2... 49 c3 c4 1C do<br />cT cV 1a d0!\',q.v.1B,J,3V);q.u.2I=q.v.3w(\'/2R.2F?S=\'+N.S.A+\'&2Q=7I\',q.v.8W);q.u.2t.1U(\'1z\',1t);q.u.3k()}C(e.1N>0&&q.u.3Z.1O(\':1z\')){2c=q.u.2Z[q.u.27()];q.v.12(\'6f S 7F 1O a 1y! 4L 3b 3i 4a\',q.v.1B,J,3V);R q.u.3T()}C(a.3l()==0){q.u.3o(q.u.21);q.u.5o();C(q.u.2P&&q.u.2G){q.u.H()}}1J{q.u.1l[q.u.21].1L=q.u.27()+1;C(q.u.27()>=q.u.3Q){C(q.u.2U.1O(\':1z\')){q.u.2T()}1J{q.u.3k()}}q.F.2e(\'2w\',q.u.1l,J);q.v.3f.2o();a.1m()}},99:B(){E a=\'1w\'+26 2J().3K();$(\'#2C\').1c(0);r.5X(a);r.3G()},44:B(a){C(a){r.3v.1c(a);$(\'#3u\').1c(r.1l[a].M);$(\'#35\').1c(r.1l[a].2v);1a(1f 1E q.F.1S){$(\'#3B\'+1f).1c(r.1l[a].2K[1f])}$(\'#2C\').1c(r.1l[a].1L)}1J{r.3v.1c(\'\');$(\'#3u\').1c(\'\');$(\'#35\').1c(\'\');$(\'#2C\').1c(0);1a(1f 1E q.F.1S){$(\'#3B\'+1f).1c(0)}}r.4f.2o()},7q:B(){C(q.u.3v.1c()){q.u.5X(q.u.3v.1c());q.u.3o(q.u.21)}1J{q.u.99()}C(q.u.3v.1c()==q.u.21||!q.u.21||q.u.21==0){q.u.3o(q.u.21)}q.u.3G();q.u.4f.1A()},6U:B(){E a=q.F.2j(\'2w\',J);C(a!=W){r.1l=a}r.3G()},5o:B(){r.2L.1u(\'\');1a(1f 1E r.2g){C(q.u.2g[1f]>0){E a=1f.3D(11);E b=q.v.3I(a);E c=r.1G.1r().Y(\'#\'+1f).4z().79().1u();E d=b+\': \'+q.u.2g[1f]+\' (\'+c.3D(1,c.1N-2)+\')\';$(\'<17 />\').1U(\'U\',\'1e://1h.1i.1j/1b/14/9E\'+a+\'.16\').1U(\'T\',d).1U(\'1g\',b).1x(r.2L).1m(B(e){q.u.44(q.u.21);$(\'#3B\'+q.u.2g[1f]).9I().9J()});$(\'<1W />\').1u(\'(\'+q.u.2g[1f]+\') \').1x(r.2L)}}},5X:B(a){E b={};1a(1f 1E q.F.1S){b[1f]=$(\'#3B\'+1f).1c()}E c={M:$(\'#3u\').1c().7o(),2K:b,2v:$(\'#35\').1c().7o(),1L:$(\'#2C\').1c()};q.u.1l[a]=c;q.F.2e(\'2w\',r.1l,J)},3o:B(a){C(!a){1a(a 1E r.1l)4A;C(!a){r.44();$(\'#2C\').1c(0);R}}r.21=a;E b=r.1l[a];$(\'#6w\').1u(b.M);1a(1f 1E q.F.1S){r.2g[1f]=b.2K[1f]}r.1d=b.2v;r.2Z=r.1d.2h(" ");r.3Q=r.2Z.1N;r.5o();$(\'#3x\').1c(r.27()+1);$(\'#50\').1u(r.3Q);R b},7z:B(a){7a r.1l[a];C(r.21==a){r.3o()}q.F.2e(\'2w\',r.1l,J);r.3G()},3G:B(){r.2E.6l().41();1a(E b 1E r.1l){E c=$(\'<D/>\').1x(q.u.2E);$(\'<w T="7B r H" />\').1u(\'L\').3y(\'1m\',{H:b},B(a){q.u.3o(a.F.H)}).2b({\'G\':\'1H\',\'3R\':\'3z\',\'1s\':\'#83\',\'1R-1s\':\'#5a\'}).1x(c);$(\'<w>\'+r.1l[b].M+\'</w>\').1x(c);$(\'<w T="aM r H (aP 8b aT aU)" />\').1u(\'X\').3y(\'1m\',{H:b},B(a){q.u.7z(a.F.H)}).2b({\'G\':\'1H\',\'3R\':\'3z\',\'1s\':\'#3A\'}).1x(c)}},5d:B(a,b){E c=r.2g;E d=r.1G;C(b!=W){c=b.2K;d=b.2z}C(c[a]==0)R J;E e=d.1r().Y(\'#\'+a).4z().79().1u();C(29(e.3D(1,e.1N-2))>=29(c[a])){d.1r().Y(\'#\'+a).1c(c[a]);R J}C(r.2t.1O(\':1z\')){q.v.12(\'8h 5k 2Y 2X I: \'+q.F.1S[a]+\' bD bE 8k R...\',q.v.2l)}1J{q.v.12(\'8h 5k 2Y 2X I: \'+q.F.1S[a],q.v.1B);C(b==W){r.3k()}}R 1t},3T:B(){r.1l[r.21].1L=r.27()+1;C(r.27()>=r.3Q){C(r.2U.1O(\':1z\')){r.2T()}1J{r.3k()}}q.F.2e(\'2w\',r.1l,J);r.1G.1U(\'U\',r.4U)},H:B(){q.u.46.1A();q.u.45.2o();2c=q.u.2Z[q.u.27()];5l=2c.2h("|");q.u.2G=J;1a(1f 1E q.u.2g){C(q.u.2G){q.u.2G=q.u.5d(1f)}}C(q.u.2G){q.u.1G.1r().Y(\'#8C\').1c(5l[0]);q.u.1G.1r().Y(\'#8N\').1c(5l[1]);q.u.1G.1r().Y(\'#8O\').1m();q.u.2P=J;q.v.3f.2o();q.v.12(\'8S: [\'+2c+\']\',q.v.2l);R}C(q.v.4b&&q.u.2t.1O(\':1z\')){E a=q.u.1G.1r().Y(\'P.1M:3e("5A") D w:3e("bT"):2M\').4z().3i().2M().Y(\'1W\').1u();E b=[];C(a!=W){b=a}1J{b=q.u.1G.1r().Y(\'P.1M:3e("5A") D w:3e("4d"):2M\').4z().3i().2M().Y(\'1W.4e\').1u()}E c=b.2h(\':\');c=29(c[0]*5q)+29(c[1]*60)+29(c[2]);q.v.12(\'c5 R 1E <1W x="4G">\'+c+\' c6</1W>\',q.v.2l);q.u.c8=86.84(q.u.6V,c*4i+24.48()*4i+1)}},cN:B(a,b){E c={};c.2z=q.v.3w(q.u.4U,q.u.9b());c.2K=b;E d=J;1a(1f 1E q.u.2g){C(d){d=q.u.5d(1f,c)}}C(d){c.2z.1r().Y(\'#8C\').1c(a[0]);c.2z.1r().Y(\'#8N\').1c(a[1]);c.2z.1r().Y(\'#8O\').1m();q.u.2P=J;q.v.3f.2o();q.v.12(\'8S: [\'+2c+\']\',q.v.2r);R}},9b:B(){},27:B(){R 29(r.1l[r.21].1L)},3k:B(){q.u.46.2o();q.u.45.1A();q.u.2P=1t;q.u.2G=1t;C(q.u.27()>=q.u.3Q){q.v.12("cP , cR H 2H cS 1C 2M 9e.",q.v.2r);q.u.2T(J)}},2T:B(a){C(!a)q.v.12("cU 1C 2M 9e.",q.v.2l);q.u.1l[q.u.21].1L=0;$(\'#3x\').1c(q.u.27()+1);q.F.2e(\'2w\',q.u.1l,J)}},Z:{9i:cX,5B:\'\',2z:W,1D:W,3n:W,2p:W,6A:{},2q:B(){q.Z.5B=\'/2R.2F?S=\'+N.S.A+\'&d6=d7&2Q=d8&d9=\'+q.Z.9i;q.Z.2z=q.v.3w(q.Z.5B,q.Z.6D);q.Z.2p=$(\'#2p\');r.3n=$(\'#3n\').1m(B(){C($(r).1O(\':1z\')){}1J{}})},6D:B(){q.Z.1D=$.dd(q.Z.2z.1r().Y(\'.6F .V .dh K 1W\').1u());C(q.Z.1D==W){q.v.12(\'dl dm 5F 5I 6K dr 49 5U dt du 1a dv.\',q.v.2r);R}C(q.Z.1D.6T==W){q.v.12(q.Z.1D.6T,q.v.2r,J,4F)}q.v.12(\'u 4B: \',q.v.2r);1a(H 1E q.Z.1D.u){E b=\'\';E c=0;E d=26 2J(q.Z.1D.u[H].5V);E f=0;E g=q.Z.1D.u[H].2v.2h(\' \').1N;E i=\'\';1a(14 1E q.Z.1D.u[H].2Y){i+=\' \'+q.Z.1D.u[H].2Y[14]+\' \'+q.v.3I(14)+\'\';C(!q.Z.1D.u[H].5W){C(q.F.1V.3W(14)>f){f=q.F.1V.3W(14)}}}q.v.12(\'[\'+H+\']: 4B\',q.v.2r);E j={};1a(1f 1E q.F.1S){1a(14 1E q.Z.1D.u[H].2Y){C(\'6z\'+14==1f){j[1f]=q.Z.1D.u[H].2Y[14]}}}b=q.Z.1D.u[H].2v.2h(\' \')[0];c=q.v.4l(q.F.1V[f],b);C(!q.Z.1D.u[H].5W){d.71(d.4m()-c)}E k={M:H,2K:j,2v:q.Z.1D.u[H].2v,1L:0,dK:d,4n:q.Z.1D.u[H].4n};q.Z.6A[H]=k;E l=$(\'<D/>\').1x(q.Z.2p);C(!q.Z.1D.u[H].5W){l.1U(\'x\',\'6y\')}$(\'<w T="7B [\'+H+\']: dQ \'+i+\' 1C \'+g+\' dS(s)" />\').1u(\'L\').3y(\'1m\',{H:k},B(a){q.Z.7d(a.F.H)}).2b({\'G\':\'1H\',\'3R\':\'3z\',\'1s\':\'#83\',\'1R-1s\':\'#5a\'}).1x(l);$(\'<w T="\'+q.Z.1D.u[H].4n+\'">\'+H+\'</w>\').1x(l);E n=\'ec 7g 7h 1a r H 3E:<br />\';1a(6d 1E q.F.1d){E o=q.v.4l(q.F.1V[f],b,q.F.1d[6d].3C);E h=24.3F(o/60);E m=24.3F(o%60);n+=\' \'+q.F.1d[6d].M+\': \'+q.v.2n(h)+\':\'+q.v.2n(m)+\'h<br />\'}$(\'<w x="4e"><p A="7s\'+H+\'"></p><1W x="6j">\'+n+\'</1W></w>\').9U(B(e){$(e.9W).Y(\'.6j\').2b({\'1F\':\'7x\'}).6k()}).1x(l);26 q.v.4y(24.3F((d.3K()-q.F.6a.3K())/4i),\'7s\'+H)}},7d:B(a){q.u.44();$(\'#3u\').1c(a.M);$(\'#35\').1c(a.2v);$(\'#2C\').1c(0);1a(1f 1E a.2K){$(\'#3B\'+1f).1c(a.2K[1f])}},a3:B(a){1X.1Y(\'4d!: \',a5);C(q.Z.3n.1O(\':1z\')){1X.1Y(a)}}},v:{1B:\'52\',2r:\'4G\',2l:\'7C\',2d:W,3f:W,3t:W,3H:1t,33:1t,3J:1t,2q:B(){r.2B=$(q.3c.2B).1x(\'2k\').3y("az",B(){C(!q.v.3H&&!q.v.33&&!q.v.3J){q.v.33=J;q.v.2B.7N({"2x":"+=7Q"},"7W",B(){q.v.33=1t;q.v.3J=J})}}).3y("aR",B(){C(!q.v.3H&&!q.v.33&&q.v.3J){q.v.33=J;q.v.2B.7N({"2x":"-=7Q"},"7W",B(){q.v.33=1t;q.v.3J=1t})}});r.2d=$(\'#2d\');r.3f=$(\'#6u\');$(\'#3r\').1m(r.89).Y(\'.4J\').1A();$(\'<Q I="V/2b">#2B {1R-1s: #6c;1K: 0 3O;53-54: 1P 1P 1H #56;1K-3P-1F-28: 1Q;1K-1v-1F-28: 1Q;-4g-1K-3P-1F-28: 1Q;-4h-1K-28-bU: 1Q;-4g-1K-1v-1F-28: 1Q;-4h-1K-28-bY:1Q;bZ: 2x;1s: #5c;3S-3l: 1H;5e-1I: 1.5f;22-2x: 0%;5h: 0.85;2f: 1Q;2f-1v: c7;1L: 5j;1v: cg;2x: -ch;V-32:1F;G: 3U;z-31:cQ}#6w {22:0}#3g {}#3g 1T {G:6B;22:0 6C;}#3g O[I="2N"] {22:1P 6C 0 0;}#3g p {G:6B}#3g 2y {G:cW;6E:cY-cZ}#5r {1R:#5s;G:3U;}#5r .1M w {1R:#5s;}#6H {1I:d3;G:5t;5u-y:5v;}#2E {G:3U;22-1v:1H;}#2E D {1I:1H;}#2E D:6g-57(6L) {1R-1s:#6M;1s:#da;}#2L {3R:3z;}#6N {1I:dc;G:5t;5u-y:5v;}#2p {G:3U;22-1v:1H;}#2p D {1I:1H;1s:#3A;3S-6O:6P;}#2p D.6y {1I:1H;1s:#3A;3S-6O:6P;V-df:dg;}#2p D:6g-57(6L) {1R-1s:#6M;}#2p .4e {G:7x;}#3r {22:0;3R:3z;}#6u {1L:3q;2x:0;3P:0;}#3X {1R-1s:#3A;1s:#6Q;}#2d {di-Q:3O;G:5t;1I:dj;5u:5v;2f:0}#2d .7C {}#2d .4G {1s:#6Q;}#2d .52 {1s:#3A;}#4r {1L:3q;1F:40%;1v: 40%;G: 3U;1R-1s: #6c;1K: 0 3O;53-54: 1P 1P 1H #56;1K-28: 1Q;-4g-1K-28: 1Q;-4h-1K-28: 1Q;1s: #5c;3S-3l: 1H;5e-1I: 1.5f;5h: 0.80;2f: 1Q;V-32:1F;z-31:6S}#4r 5x {}#5y {1L: 5j;G: 1Z%;1I: 1Z%;1v: 4s;1F: 4s;1R: 3N(1e://1h.1i.1j/1b/31/6X-6Y.16?6Z);z-31: 70;}#4t {1L:3q;1F:30%;1v: 20%;G: 72;1R-1s: #6c;1K: 0 3O;53-54: 1P 1P 1H #56;1K-28: 1Q;-4g-1K-28: 1Q;-4h-1K-28: 1Q;1s: #5c;3S-3l: 1H;5e-1I: 1.5f;5h: 0.80;2f: 1Q;V-32:1F;z-31:6S}#4u {1L: 5j;G: 1Z%;1I: 1Z%;1v: 4s;1F: 4s;1R: 3N(1e://1h.1i.1j/1b/31/6X-6Y.16?6Z);z-31: 70;}.4e {}.6j {6E:3O;1L:3q;1F:-1H;1R-1s:#5a;1s:#5s;}</Q>\').1x(\'dA\');$(\'#47\').1m(q.v.47)},89:B(){q.v.3H=!q.v.3H;$(\'#3r\').Y(\'.4J\').6k();$(\'#3r\').Y(\'.74\').6k()},12:B(a,b,c,e){C(c){dC(b){75 r.1B:5D.dF(a,e);4A;75 r.2r:5D.dG(a,e);4A;dH:5D.dI(a,e);4A}}E d=26 2J();E f=\'<i>\'+d.dJ()+\':\'+q.v.2n(d.4m())+\':\'+q.v.2n(d.77())+\': </i>\';q.v.2d.dL(\'<37 x="\'+b+\'">\'+f+a+\'</37>\');q.v.2d.dM(q.v.2d[0].dN);$(36).5G(0,0)},7b:B(a,b){a=a.2h(\'|\');b=b.2h(\'|\');R 24.dR(24.7c(29(a[0])-29(b[0]),2)+24.7c(29(a[1])-29(b[1]),2))},4l:B(a,b,c){C(!c){c=N.S.3C}R r.7b(c,b)*q.F.2m.Y(a+\' 3M\').V()},5H:B(b,e,f){E g=q.v.4l(b,e);E h=(g/60).dU().2h(\'.\')[0];E d=26 2J();d.71(d.4m()+g);C(f){R d}E c=26 2J().3K();E a=26 2J(d.3K()-c);R h+\':\'+q.v.2n(a.4m())+\':\'+q.v.2n(a.77)},dV:B(a,b){R r.5H(a,b,J)},dW:B(){E d=$(\'2k\').1u().5Z(/(\\d+)\\|(\\d+)/g);1a(c 1E d){E e=d[c];C(e!=N.S.3C){E f=$(\'<K/>\');E g=\'\';q.F.2m.6l().4v(B(a,b){C(b.34==\'69\')R;g+=\' \'+q.v.3I(b.34)+\': \'+q.v.5H(b.34,e)});$(\'<b />\').1U(\'T\',g).V(e).1x(f);36.2k.4w=36.2k.4w.dY(e,f.1u())}}},dZ:B(){94($(\'#e0\').e1().Y(\'5J\').3L(0),J);$(\'#7t w:49(:e3(17[U*=e4])) O[I=2N]\').1m();$(\'O[13="5m"]\').1m()},e5:B(){e6.e7(25)},3I:B(a){E b={\'5K\':\'9B\',\'5L\':\'9D\',\'5M\':\'9F\',\'5N\':\'9H\',\'7k\':\'7l\',\'7m\':\'9L 7l\',\'5O\':\'9N\',\'5P\':\'9P\',\'5Q\':\'9R\',\'5R\':\'9T\',\'5S\':\'9V\',\'5T\':\'9X\',\'69\':\'9Y\'};R b[a]},65:B(){C(42.1N<=0){q.v.4b=J;R}C(42.1N>0){q.v.4b=J;q.v.7u=42;42=[]}1J{42=q.v.7u;q.v.4b=1t}},2n:B(a){R(a<10)?\'0\'+a:a},4y:B(a,b){E c=36.a1(b);E d=B(){C(a>=0){E h=24.3F(a/5q);E m=24.3F((a%5q)/60);E s=a%60;c.4w=q.v.2n(h)+\':\'+q.v.2n(m)+\':\'+q.v.2n(s);a--}1J{R 1t}};E e=B(){c.4w="<7v>7w!<\\/7v>"};d.87(4i,a4,e)},3w:B(a,b){R $(\'<6I U="\'+a+\'" />\').2j(b).2b({G:\'4p\',1I:\'4p\',1L:\'3q\',1F:\'-8c\'}).1x(\'2k\')},47:B(){C(r.3t==W){r.3t=$(q.3c.3t).1x(\'2k\');$(\'#5y\').1m(B(){$(\'#4r\').1A();$(r).1A()})}r.3t.2o();$(36).5G(0,0)},8W:B(){E a=q.u.2I.1r().Y(\'17[U="/7f.16"]\');C(!a){$(\'#4t\').1A();$(\'#4u\').1A()}C(q.v.4x==W){q.v.4x=$(q.3c.2I).1x(\'2k\');q.u.2I.1x(q.v.4x);$(\'#4u\').1m(B(){$(\'#4t\').1A();$(r).1A()});q.u.2I.2b({\'1I\':\'a6\',\'G\':\'72\',\'1F\':\'0\',\'1L\':\'a7\'})}r.4x.2o();E b=q.u.2I.1r().Y(\'#a8\');E c=q.u.2I.1r().Y(\'#a9\');$(36).5G(0,0)}},3c:{2I:\'<K A="4u"></K><K A="4t"></K>\',3t:\'<K A="5y"></K><K A="4r"><5x>7y ab 2X 19 8d</5x><p>ac, 43 1O ae, af 1C 19 2x.. <br />ag 7A ai 19 2B by ak 4J 19 3r at 19 1v.<br />am u 9p 4B an, C 2u 7D 1C H ap aq 19 <b>7E</b> 2H au 19 av, aw 2j 19 ax H 2H 7w ay as aA as 19 4y aB 2u 1C do 5Y.<br />aD 19 Z H 1O aE 43 aF 5F 19 H aG aH aI at 19 aJ 5V 3E 4c aK, 5Y 43 aL be aN 1C H at 19 aO 5V!<br />7G 61 19 Z H M 3s 2o 2u a 4n aS by 7J 7K<br />7G 61 19 Z H 4y 3s 2o 2u 19 aV 7g 7h 3E aW aX 1d, 1a 5F 1C aY 2u 3s 5U 1C aZ 19 b0 at b1 b2 3E b3 S 1C 2e 19 b4 2v, b5<br /><br />b6.. 5U b7 2H C 2u 7D: </p><5J 7j="62://63.b9.64/bb-bc/bd" bf="6F"><O I="3j" M="bh" 13="bi-bj"><O I="3j" M="bk" 13="bl"><O I="bm" U="62://63.7P.64/bo/i/bp/bq.66" 1K="0" M="bs" 1g="bt — 6f bu, bv bw 1C bx bz."><17 1g="" 1K="0" U="62://63.7P.64/bA/i/bB/bC.66" G="1" 1I="1"></5J></K>\',2B:\'<K A="2B"><1W A="3r">q <17 U="1e://7R.7S/7T/7U/7V-bI%bJ%bK%bL.16" x="4J" 1I="15" /><17 U="1e://7R.7S/7T/7U/7V-bN.16" x="74" 1I="15" /></1W><K A="bO"><K A="6u"><17 U="1b/bP.66" T="67 7X 7Y 7Z..." 1g="67 7X 7Y 7Z..." /></K><81 A="2d"><37>bV bW</37><37>67 bX 82</37></81><K A="6H"><P A="2E"></P></K><K A="6N"><P A="2p"></P></K><3h A="6w"></3h><P A="5r"><1k><D><w 2i="1v"><P x="1M" G="1Z%"><1k><D><w A="2L" x="1q"><17 U="1e://1h.1i.1j/1b/5I/H.16?4D" T="4E 1d" 1g="4E 1d" x="" /><O A="3x" M="3x" I="V" Q="G: 1n" 1p="10" 13="" x="1o" 4H="4H" /><i A="50">6v...</i>&4I;</w></D></1k></P></w></D><D><w 2i="1v"><P x="1M" G="1Z%"><1k><D><w x="1q"><17 U="1e://1h.1i.1j/1b/5I/H.16?4D" T="4E 1d" 1g="4E 1d" x="" /><O A="3x" M="3x" I="V" Q="G: 1n" 1p="10" 13="" x="1o" 4H="4H" /><i A="50">6v...</i>&4I;</w></D></1k></P></w></D></1k></P><K A="3g"><1T A="46">4d</1T><1T A="45">c9 2P</1T><2y 1a="2U">ca\\\'t cb</2y> <O I="2N" A="2U" T="C 1z 19 cc at 19 cd 2X a ce 1O cf"/><2y 1a="2t" T="8f 8g 3L 2u 68! ci 5Y 8g cj 19 ck 2X 19 7M..">cl</2y> <O I="2N" A="2t" T="C 1z 19 7L 3s be cm 3E cn 2H co 6y 2X 5k 82 19 u cp cq"/><2y 1a="3Z">cr?</2y> <O I="2N" A="3Z" T="C 1z 6e ct S 3s be cu, cv cw 3L 1C cx 2u" 1z="1z"/><1T A="51">7y 4d</1T><1T A="2T" T="cy cz 1C 19 2M S">cA</1T><1T A="47">cB!</1T><1T A="7e">cC cD</1T><1T A="3X" T="7A 49 be cE!">5m cF</1T><2y 1a="3n" T="8b cG cH!!! 8f 3s cI 1C H 19 1d cJ by 7J cK 7K.">7E</2y> <O I="2N" A="3n" T="C 1z 19 cL cM 61 19 6K 1a 8k u!"/></K></K></K>\',6J:\'<K A="3a"><K A="8i"></K><K A="8j" 4K="$(\\\'#3a\\\').1A();"></K><P Q="G: 8l; 22-1F: -8m" A="8n" 8o="0"><D><w x="8p"></w><w x="8q"></w><w x="8r"></w></D><D><w x="8s"></w><w x="8t"><a A="8u" 5p="#" 4K="$(\\\'#3a\\\').1A(); R 1t;">&4I;</a><K Q="1R: 6e-8v 3N(\\\'/1b/8w.16\\\');"><3h Q="22: 0 8x 1P 8y;">8z 26 H 8A</3h><P 32="2x" Q="22-3P: 1P;"><D><w x="39-4M" G="8D"><4N>8F 43 a M:</4N><p Q="2f: 1P"><O I="V" A="3u" /></p></w><w x="39-4M" G="8G">8H 5E 19 26 8I 1a r H<p Q="2f: 1P"><O I="V" A="35" /></p></w></D></P><K x="39-8J"><P A="8K"><1k><D><w 2i="1v"><P x="1M" G="1Z%"><1k><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/8L.16?8M" T="4O 4P" 1g="4O 4P" x="" /><O A="8P" M="5K" I="V" Q="G: 1n" 1p="1" 13="" x="1o" /></w></D><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/8Q.16?8R" T="4Q" 1g="4Q" x="" /><O A="8T" M="5L" I="V" Q="G: 1n" 1p="2" 13="" x="1o" /></w></D><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/8U.16?6n" T="4R" 1g="4R" x="" /><O A="8X" M="5M" I="V" Q="G: 1n" 1p="3" 13="" x="1o" /></w></D></1k></P></w><w 2i="1v"><P x="1M" G="1Z%"><1k><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/8Y.16?8Z" T="4S" 1g="4S" x="" /><O A="91" M="5N" I="V" Q="G: 1n" 1p="4" 13="" x="1o" /></w></D><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/92.16?93" T="4T 2D" 1g="4T 2D" x="" /><O A="96" M="5O" I="V" Q="G: 1n" 1p="5" 13="" x="1o" /></w></D><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/97.16?6s" T="4V 2D" 1g="4V 2D" x="" /><O A="9a" M="5P" I="V" Q="G: 1n" 1p="6" 13="" x="1o" /></w></D></1k></P></w><w 2i="1v"><P x="1M" G="1Z%"><1k><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/9c.16?9d" T="4W" 1g="4W" x="" /><O A="9f" M="5Q" I="V" Q="G: 1n" 1p="7" 13="" x="1o" /></w></D><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/9g.16?9h" T="4X" 1g="4X" x="" /><O A="9j" M="5R" I="V" Q="G: 1n" 1p="8" 13="" x="1o" /></w></D></1k></P></w><w 2i="1v"><P x="1M" G="1Z%"><1k><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/9k.16?9l" T="4Y" 1g="4Y" x="" /><O A="9n" M="5S" I="V" Q="G: 1n" 1p="9" 13="" x="1o" /></w></D><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/9o.16?4D" T="4Z" 1g="4Z" x="" /><O A="9q" M="5T" I="V" Q="G: 1n" 1p="10" 13="" x="1o" /></w></D></1k></P></w></D></1k></P></K><K 32="9r" Q="2f: 1H;"><b x="9s" A="5b">9t &9u; </b><O I="3j" A="5n" 13="" /><O I="3j" A="2C" 13="" /></K></w><w x="9v"></w></D><D><w x="9w"></w><w x="9x"></w><w x="9y"></w></D></P></K>\',6R:\'<K A="3a"><K A="8i"></K><K A="8j" 4K="$(\\\'#3a\\\').1A();"></K><P Q="G: 8l; 22-1F: -8m" A="8n" 8o="0"><D><w x="8p"></w><w x="8q"></w><w x="8r"></w></D><D><w x="8s"></w><w x="8t"><a A="8u" 5p="#" 4K="$(\\\'#3a\\\').1A(); R 1t;">&4I;</a><K Q="1R: 6e-8v 3N(\\\'/1b/8w.16\\\');"><3h Q="22: 0 8x 1P 8y;">8z 26 H 8A</3h><P 32="2x" Q="22-3P: 1P;"><D><w x="39-4M" G="8D"><4N>8F 43 a M:</4N><p Q="2f: 1P"><O I="V" A="3u" /></p></w><w x="39-4M" G="8G">8H 5E 19 26 8I 1a r H<p Q="2f: 1P"><O I="V" A="35" /></p></w></D></P><K x="39-8J"><P A="8K"><1k><D><w 2i="1v"><P x="1M" G="1Z%"><1k><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/8L.16?8M" T="4O 4P" 1g="4O 4P" x="" /><O A="8P" M="5K" I="V" Q="G: 1n" 1p="1" 13="" x="1o" /></w></D><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/8Q.16?8R" T="4Q" 1g="4Q" x="" /><O A="8T" M="5L" I="V" Q="G: 1n" 1p="2" 13="" x="1o" /></w></D><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/8U.16?6n" T="4R" 1g="4R" x="" /><O A="8X" M="5M" I="V" Q="G: 1n" 1p="3" 13="" x="1o" /></w></D><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/e8.16?6n" T="4o" 1g="4o" x="" /><O A="e9" M="7k" I="V" Q="G: 1n" 1p="3" 13="" x="1o" /></w></D></1k></P></w><w 2i="1v"><P x="1M" G="1Z%"><1k><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/8Y.16?8Z" T="4S" 1g="4S" x="" /><O A="91" M="5N" I="V" Q="G: 1n" 1p="4" 13="" x="1o" /></w></D><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/92.16?93" T="4T 2D" 1g="4T 2D" x="" /><O A="96" M="5O" I="V" Q="G: 1n" 1p="5" 13="" x="1o" /></w></D><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/ea.16?6s" T="9A 4o" 1g="9A 4o" x="" /><O A="cO" M="7m" I="V" Q="G: 1n" 1p="6" 13="" x="1o" /></w></D><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/97.16?6s" T="4V 2D" 1g="4V 2D" x="" /><O A="9a" M="5P" I="V" Q="G: 1n" 1p="6" 13="" x="1o" /></w></D></1k></P></w><w 2i="1v"><P x="1M" G="1Z%"><1k><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/9c.16?9d" T="4W" 1g="4W" x="" /><O A="9f" M="5Q" I="V" Q="G: 1n" 1p="7" 13="" x="1o" /></w></D><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/9g.16?9h" T="4X" 1g="4X" x="" /><O A="9j" M="5R" I="V" Q="G: 1n" 1p="8" 13="" x="1o" /></w></D></1k></P></w><w 2i="1v"><P x="1M" G="1Z%"><1k><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/9k.16?9l" T="4Y" 1g="4Y" x="" /><O A="9n" M="5S" I="V" Q="G: 1n" 1p="9" 13="" x="1o" /></w></D><D><w x="1q"><17 U="1e://1h.1i.1j/1b/14/9o.16?4D" T="4Z" 1g="4Z" x="" /><O A="9q" M="5T" I="V" Q="G: 1n" 1p="10" 13="" x="1o" /></w></D></1k></P></w></D></1k></P></K><K 32="9r" Q="2f: 1H;"><b x="9s" A="5b">9t &9u; </b><O I="3j" A="5n" 13="" /><O I="3j" A="2C" 13="" /></K></w><w x="9v"></w></D><D><w x="9w"></w><w x="9x"></w><w x="9y"></w></D></P></K>\'}};q.2q();',62,881,'||||||||||||||||||||||||||TWBot|this|||attacks|helpers|td|class|||id|function|if|tr|var|data|width|attack|type|true|div||name|game_data|input|table|style|return|village|title|src|text|null||find|remote|||writeOut|value|unit||png|img||the|for|graphic|val|villages|http|unitType|alt|cdn2|tribalwars|net|tbody|attackTemplates|click|40px|unitsInput|tabindex|nowrap|contents|color|false|html|top|_|appendTo|player|checked|hide|MESSAGETYPE_ERROR|to|commands|in|left|hiddenFrame|10px|height|else|border|position|vis|length|is|5px|15px|background|unitTypes|button|attr|unitsBySpeed|span|console|log|100||attackId|margin|localStorage|Math||new|getPosition|radius|parseInt|world|css|coordData|messages|store|padding|unitPerAttack|split|valign|load|body|MESSAGETYPE_NOTE|unitConfig|leadingzero|show|rAttackList|init|MESSAGETYPE_NORMAL|Removed|botting|you|coords|attacks_attacktemplates|right|label|frame|storeGlobally|panel|template_position|cavalry|attackList|php|continueAttack|and|captchaFrame|Date|unitsPerAttack|attackUnits|first|checkbox|loadGlobally|attacking|screen|game|removeGlobally|resetAttack|continuousAttack|report|getItem|of|units|villagearr||index|align|panelInTransit|tagName|template_coords|document|li|serverDate|quest|popup_container|with|htmlsnippets|worldConfig|contains|spinner|buttons|h3|next|hidden|stopAttack|size|reportedVillages|autoPilot|loadAttack|reportsInfoFrameUrl|absolute|tack|will|splash|template_name|templAttackId|createHiddenFrame|attackedVillages|bind|pointer|f00|template_|coord|substr|from|floor|populateAttackList|stickyPanel|getUnitTypeName|panelOut|getTime|get|speed|url|none|bottom|targets|cursor|font|ignoreVillage|300px|5000|indexOf|delEverything|JSON|ignorePlayers||remove|timers|it|showAttackTemplate|sAttackButton|attackButton|showSplash|random|not|Village|timerOff|all|Attack|timer|attackTemplatePopup|webkit|moz|1000|migrated|rnd|calculateMinutesToTarget|getMinutes|description|Archer|100px|data_playerInfo|splashscreen|0px|captchaframe|captchacloser|each|innerHTML|captchaF|countdown|siblings|break|loaded|setItem|0019c|Attacked|3000|nor|disabled|nbsp|on|onclick|Continuing|summary|h5|Spear|fighter|Swordsman|Axeman|Scout|Light|hiddenFrameUrl|Heavy|Ram|Catapult|Paladin|Nobleman|amount_of_attackedVillages|cAttackButton|er|box|shadow|payload|999999|child|keys|Object|fff|saveTemplate|ddd|sendUnits|line|5em|data_villages|opacity|premium|fixed|enough|getCoords|Delete|template_attackId|showAttack|href|3600|unitTable|000|310px|overflow|auto|reportsInfoFrame|h1|closer|servertime|Own|frameUrl|parse|UI|here|that|scrollTo|calculateTravelTime|command|form|spear|sword|axe|spy|light|heavy|ram|catapult|knight|snob|have|time|departure|saveAttack|so|match||over|https|www|com|toggleTimer|gif|Loading|banned|militia|serverTime|init_seensplashscreen|000000|vil|no|The|nth|createWorldConfig|createUnitConfig|tooltip|toggle|children|createConfig|51d94|data_unitBySpeeds|data_unitTypes|data_unitConfig|data_worldConfig|a83c9|data_reportedVillages|loading|fetching|attackName|ignoring|arrival|unit_input_|remoteAttacks|145px|2px|ordersLoaded|display|post|migrateOldData|attackListWrapper|iframe|popup|control|odd|c0c0c0|rAttackListWrapper|wheight|bold|0f0|popup2|99999|message|loadAttacks|polling|bonus|grey|fade|01a9d|12000|setMinutes|370px|retrieveReport|off|case|removeItem|getSeconds|buildings|last|delete|calculateDistance|pow|createRemoteAttack|processReports|human|travel|times|con|action|archer|Arrows|marcher|reportsLoaded|trim|stored|saveAttackTemplate|join|rAttackCounter_|report_list|tmptimers|strong|Fire|50px|New|removeAttack|can|Load|note|want|AutoPilot|owner|Hovering|retrieveVillagesData|overview_villages|our|leaders|page|script|animate|error|paypalobjects|314px|openclipart|org|people|randoogle|16px|slow|something|please|wait||ul|troops|00f|setTimeout||window|Timer|villageInfoHiddenFrame|toggleSticky|stringify|NOT|1000px|Bot|group|This|may|Not|popup_box_bg|fader|some|700px|350px|popup_box|cellspacing|popup_box_top_left|popup_box_top|popup_box_top_right|popup_box_left|popup_box_content|popup_box_close|repeat|paladin_new|3px|120px|Create|plan|Ignoring|inputx|200|request|Give|310|Enter|coordinates|goal|unitTableTemplate|unit_spear|48b3b|inputy|target_attack|template_unit_input_spear|unit_sword|b389d|Attacking|template_unit_input_sword|unit_axe|parseFloat|displayCaptcha|template_unit_input_axe|unit_spy|eb866|villageInfoFrameUrl|template_unit_input_spy|unit_light|2d86d|selectAll|res|template_unit_input_light|unit_heavy|frameLoaded|createAttack|template_unit_input_heavy|attackThisFrameHandler|unit_ram|2003e|Coords|template_unit_input_ram|unit_catapult|5659c|orderThread|template_unit_input_catapult|unit_knight|58dd0|trying|template_unit_input_knight|unit_snob|are|template_unit_input_snob|center|red|Complete|raquo|popup_box_right|popup_box_bottom_left|popup_box_bottom|popup_box_bottom_right|infosLoaded|Mobile|Spears|replaceWith|Swords|unit_|Olafs|ajax|Scouts|focus|select|beginning|Fast|place|LC|production_table|HC|fadeOut|Rams|troop_confirm_go|Catas|hover|Palas|currentTarget|Nobles|Mob|bot_check|get_config|getElementById|unit_input_marcher|remoteAttack|Infinity|arguments|130px|relative|bot_check_code|bot_check_submit|sort|Version|Yeah|Player|updated|look|You|Ajaxerror|pin|_attacktemplates|clicking|success|Remote|automatically|view|either|check|Processed|||enjoy|ride|or|desired|away|mouseenter|soon|tells|Function|If|underlined|means|shall|arrive|coordinated|same|members|would|Remove|crucial|correct|CAN|dataType|mouseleave|set|BE|UNDONE|estimated|your|different|work|start|bot|least|once|every|corresponding|etc|So|fun|rAttackButton|paypal|All|cgi|bin|webscr||method|reports|cmd|_s|xclick|hosted_button_id|HZK34AYU8LLWG|image|processed|en_GB|btn|btn_donate_LG||submit|PayPal|safer|easier|way|pay||online|de_DE|scr|pixel|waiting|till|beginner|Christmas|prototype|thumb|20tack|202|20plain|String|randoogle_Thumbtack_Pushpin|newContent|throbber|Protection|mode|need|Return|bottomleft|Initialized|layout|available|topleft|float|enter|captcha|somewhere|sure|what|Next|Seconds|1px|activeInterval|Stop|Don|stop|pause|end|cycle|omitted|60px|315px|but|using|rest|BotMode|prevented|reloading|upon|continue|automagically|Users|interface|user|attacked|only|Barbs|fear|Reset|attackcounter|reset|Help|Process|Reports|undone|Everything|WORKING|YET|try|determined|glorious|swarm|takes|attackThis|template_unit_input_marcher|Cycle|9999|stopping|resetting|Disabling|Resetting|botmode|129px|240871|inline|block|now|del_one|3f68|140px|func|out|screenmode|view_thread|forum|thread_id|0c0c0c|Removing|80px|parseJSON|xml|decoration|underline|spoiler|list|90px|Updated|It|seems|wordConfig||ON|playerInfo|does|OFF|any|missions|us|unitSpeeds|Reload|toUpperCase|To|head|change|switch|amount|info|ErrorMessage|SuccessMessage|default|InfoMessage|getHours|date|append|scrollTop|scrollHeight|sent|we|send|sqrt|Target|config|toString|calculateArrivalDate|enrichCoords|async|replace|cleanReports|select_all|parents|show_outgoing_units|has|green|resizeMap|TWMap|resize|unit_archer|template_unit_input_archer|unit_marcher|get_unit_info|Estimated'.split('|'),0,{}))
+var TWBot = {
+    init: function () {
+  	this.helpers.init();
+		this.data.init();
+		this.attacks.init();
+		this.remote.init();
+		var j = this.data.loadGlobally('init_seensplashscreen');
+		if (j == null) {
+			this.helpers.showSplash();
+			TWBot.data.storeGlobally('init_seensplashscreen', true)
+		}
+		Function.prototype.Timer = function (a, b, c) {
+			var d = 0;
+			var e = this;
+			var f = new Date();
+			var g = function () {
+				return e(f, d)
+			};
+			var h = function () {
+				if (c) {
+					c(f, d, b)
+				}
+			};
+			var i = function () {
+				d++;
+				if (d < b && g() != false) {
+					window.setTimeout(i, a)
+				}
+				else {
+					h()
+				}
+			};
+			i()
+		}
+	},
+	data: {
+		servertime: null,
+		serverDate: null,
+		worldConfig: null,
+		unitConfig: null,
+		unitTypes: {},
+		unitsBySpeed: [],
+		player: {
+			id: 0,
+			name: '',
+			premium: false,
+			migrated: false
+		},
+		villages: {},
+		reportedVillages: {},
+		reportsInfoFrameUrl: '',
+		request: function (d, f, g, h) {
+			var i = null,
+				payload = null;
+			$.ajax({
+				'url': d,
+				'data': g,
+				'dataType': h,
+				'type': String(f || 'get').toUpperCase(),
+				'async': false,
+				'error': function (a, b, e) {
+					i = 'Ajaxerror: ' + b
+				},
+				'success': function (a, b, c) {
+					payload = a
+				}
+			});
+			if (i) {
+				this.helpers.writeOut(i, TWBot.helpers.MESSAGETYPE_ERROR, true, 3000)
+			}
+			return payload
+		},
+		createConfig: function (a) {
+			return $(this.request('/interface.php', 'get', {'func': a}, 'xml')).find('config')
+		},
+		createUnitConfig: function () {
+			return this.createConfig('get_unit_info')
+		},
+		createWorldConfig: function () {
+			return this.createConfig('get_config')
+		},
+		init: function () {
+			this.player = this.loadGlobally('data_playerInfo', true);
+			if (this.player == null || this.player.id == 0) {
+				this.player = {};
+				this.player.id = parseInt(game_data.player.id);
+				this.player.name = game_data.player.name;
+				this.player.premium = game_data.player.premium;
+				this.player.migrated = false;
+				this.storeGlobally('data_playerInfo', this.player, true)
+			}
+			if (!this.player.migrated) {
+				this.migrateOldData()
+			}
+			TWBot.attacks.attackTemplates = this.load('attacks_attacktemplates', true);
+			console.log('and?', TWBot.attacks.attackTemplates);
+			if (TWBot.attacks.attackTemplates == null) {
+				console.log('here we are!');
+				TWBot.attacks.attackTemplates = {}
+			}
+			this.villages = this.loadGlobally('data_villages', true);
+			if (this.villages == null || Object.keys(this.villages).length == 0 || Object.keys(this.villages).length != game_data.player.villages || this.villages[game_data.village.id].id == null) {
+				if (this.villages == null || Object.keys(this.villages).length == 0) {// if length == 0 then isn't villages == {} already ???
+					this.villages = {};
+				}
+				this.retrieveVillagesData();
+			}
+			this.reportedVillages = this.loadGlobally('data_reportedVillages', true);
+			if (this.reportedVillages == null) {
+				this.reportedVillages = {};
+				this.storeGlobally('data_reportedVillages', this.reportedVillages, true);
+			}
+			this.worldConfig = this.loadGlobally('data_worldConfig');
+			this.worldConfig = this.createWorldConfig();
+			if (this.worldConfig == null) {
+				this.worldConfig = this.createWorldConfig();
+				this.storeGlobally('data_worldConfig', this.worldConfig)
+			}
+			this.unitConfig = this.loadGlobally('data_unitConfig');
+			this.unitConfig = this.createUnitConfig();
+			if (this.unitConfig == null) {
+				this.unitConfig = this.createUnitConfig();
+				this.storeGlobally('data_unitConfig', this.unitConfig)
+			}
+			this.unitTypes = this.load('data_unitTypes', true);
+			this.unitsBySpeed = this.load('data_unitBySpeeds');
+			if (this.unitsBySpeed != null) {
+				this.unitsBySpeed = this.unitsBySpeed.split(' ')
+			}
+			if (this.unitTypes == null || this.unitsBySpeed == null) {
+				this.unitTypes = {};
+				var c = [];
+				this.unitsBySpeed = [];
+				this.unitConfig.children().each(function (a, b) {
+					if (b.tagName == 'militia') return;
+					TWBot.data.unitTypes['unit_input_' + b.tagName] = TWBot.helpers.getUnitTypeName(b.tagName);
+					c[c.length] = {
+						unit: b.tagName,
+						speed: $(b).find('speed').text()
+					}
+				});
+				c.sort(function (a, b) {
+					return parseFloat(a.speed, 10) - parseFloat(b.speed, 10)
+				});
+				for (s in c) {
+					this.unitsBySpeed[this.unitsBySpeed.length] = c[s].unit
+				}
+				this.store('data_unitTypes', this.unitTypes, true);
+				this.store('data_unitBySpeeds', this.unitsBySpeed.join(' '))
+			}
+			this.servertime = $('#serverTime').html().match(/\d+/g);
+			this.serverDate = $('#serverDate').html().match(/\d+/g);
+			this.serverTime = new Date(this.serverDate[1] + '/' + this.serverDate[0] + '/' + this.serverDate[2] + ' ' + this.servertime.join(':'));
+			$('#processReports').click(TWBot.data.retrieveReport).hide();
+			$('#delEverything').click(TWBot.data.delEverything).hide()
+		},
+		migrateOldData: function () {
+			var a = localStorage.getItem(game_data.village.id + '_attacktemplates');
+			if (a != null) {
+				this.store('attacks_attacktemplates', a)//third parameter is missing : boolean c
+			}
+			this.player.migrated = true;
+			this.storeGlobally('data_playerInfo', this.player, true)
+		},
+		store: function (a, b, c) {
+			console.log('trying to store [' + a + ']: [' + b + ']', c);
+			if (c) {
+				localStorage.setItem(game_data.world + '_' + game_data.village.id + '_' + a, JSON.stringify(b))
+			}
+			else {
+				localStorage.setItem(game_data.world + '_' + game_data.village.id + '_' + a, b)
+			}
+		},
+		storeGlobally: function (a, b, c) {
+			if (c) {
+				localStorage.setItem(game_data.world + '_' + a, JSON.stringify(b))
+			}
+			else {
+				localStorage.setItem(game_data.world + '_' + a, b)
+			}
+		},
+		load: function (a, b) {
+			console.log('trying to load [' + a + ']', b);
+			if (b) {
+				console.log('value for [' + a + '] : [' + JSON.parse(localStorage.getItem(game_data.world + '_' + game_data.village.id + '_' + a)) + ']');
+				return JSON.parse(localStorage.getItem(game_data.world + '_' + game_data.village.id + '_' + a))
+			}
+			console.log('value for [' + a + '] : [' + localStorage.getItem(game_data.world + '_' + game_data.village.id + '_' + a) + ']');
+			return localStorage.getItem(game_data.world + '_' + game_data.village.id + '_' + a)
+		},
+		loadGlobally: function (a, b) {
+			if (b) {
+				return JSON.parse(localStorage.getItem(game_data.world + '_' + a))
+			}
+			return localStorage.getItem(game_data.world + '_' + a)
+		},
+		remove: function (a) {
+			localStorage.removeItem(game_data.world + '_' + game_data.village.id + '_' + a)
+		},
+		removeGlobally: function (a) {
+			localStorage.removeItem(game_data.world + '_' + a)
+		},
+		retrieveVillagesData: function () {
+			TWBot.data.villageInfoFrameUrl = '/game.php?village=' + game_data.village.id + '&screen=overview_villages&rnd=' + Math.random();
+			TWBot.data.villageInfoHiddenFrame = $('<iframe src="' + TWBot.data.villageInfoFrameUrl + '" />').load(TWBot.data.infosLoaded).css({
+				width: '100px',
+				height: '100px',
+				position: 'absolute',
+				left: '-1000px'
+			}).appendTo('body')
+		},
+		infosLoaded: function () {
+			var d = TWBot.data.villageInfoHiddenFrame.contents().find("#production_table tr td:nth-child(1)");
+			d.find('a').each(function (a, e) {
+				var b = {};
+				var c = $(e).attr('href').substr(18).split('&')[0];
+				if (TWBot.data.villages[c] != null && TWBot.data.villages[c].id != null) {
+					b = TWBot.data.villages[c]
+				}
+				if (game_data.village.id == c) {
+					b.id = game_data.village.id;
+					b.bonus = game_data.village.bonus;
+					b.buildings = game_data.village.buildings;
+					b.con = game_data.village.con;
+					b.coord = game_data.village.coord;
+					b.group = game_data.village.group;
+					b.name = game_data.village.name;
+					b.res = game_data.village.res;
+					TWBot.helpers.writeOut("Updated Village info for " + game_data.village.name, TWBot.helpers.MESSAGETYPE_NORMAL)
+				}
+				TWBot.data.villages[c] = b
+			});
+			TWBot.data.storeGlobally('data_villages', TWBot.data.villages, true)
+		},
+		retrieveReport: function () {
+			TWBot.data.reportsInfoFrameUrl = '/game.php?village=' + game_data.village.id + '&screen=report&rnd=' + Math.random();
+			TWBot.data.reportsInfoFrame = TWBot.helpers.createHiddenFrame(TWBot.data.reportsInfoFrameUrl, TWBot.data.reportsLoaded)
+		},
+		reportsLoaded: function () {
+			console.log('beginning to load');
+			var b = TWBot.data.reportsInfoFrame.contents().find('#report_list');
+			if (b.length > 0) {
+				var c = 0;
+				b.find('input[type=checkbox]:not(.selectAll)').each(function (a, e) {
+					c = parseInt(e.name.substr(3));
+					TWBot.data.reportsInfoFrameUrl = '/game.php?village=' + game_data.village.id + '&view=' + c + '&screen=report&rnd=' + Math.random();
+					TWBot.helpers.writeOut('Processed report with id [' + c + ']', TWBot.helpers.MESSAGETYPE_NOTE);
+					TWBot.data.reportsInfoFrame.attr('src', TWBot.data.reportsInfoFrameUrl);
+					console.log(c);
+					return
+				});
+				if (c == 0) {
+					TWBot.helpers.writeOut('All reports processed', TWBot.helpers.MESSAGETYPE_NOTE);
+					return
+				}
+			}
+			else {
+				console.log('report loaded!');
+				console.log('fetching data');
+				console.log('delete report');
+				TWBot.data.reportsInfoFrameUrl = '/game.php?village=' + game_data.village.id + '&mode=all&action=del_one&h=3f68&id=' + c + '&screen=report&rnd=' + Math.random();
+				TWBot.helpers.writeOut('Delete report with id [' + c + ']', TWBot.helpers.MESSAGETYPE_NOTE)
+			}
+			console.log('and out')
+		},
+		delEverything: function () {
+			TWBot.helpers.writeOut('Removing all stored data!', TWBot.helpers.MESSAGETYPE_ERROR, true, 3000);
+			TWBot.data.removeGlobally('init_seensplashscreen');
+			TWBot.data.removeGlobally('data_worldConfig');
+			TWBot.helpers.writeOut('Removed wordConfig!', TWBot.helpers.MESSAGETYPE_ERROR);
+			TWBot.data.removeGlobally('data_playerInfo');
+			TWBot.helpers.writeOut('Removed playerInfo!', TWBot.helpers.MESSAGETYPE_ERROR);
+			TWBot.data.removeGlobally('data_villages');
+			TWBot.helpers.writeOut('Removed villages!', TWBot.helpers.MESSAGETYPE_ERROR);
+			TWBot.data.removeGlobally('data_reportedVillages');
+			TWBot.helpers.writeOut('Removed reportedVillages!', TWBot.helpers.MESSAGETYPE_ERROR);
+			TWBot.data.removeGlobally('data_unitConfig');
+			TWBot.helpers.writeOut('Removed unitConfig!', TWBot.helpers.MESSAGETYPE_ERROR);
+			TWBot.data.remove('data_unitTypes');
+			TWBot.helpers.writeOut('Removed unitTypes!', TWBot.helpers.MESSAGETYPE_ERROR);
+			TWBot.data.remove('data_unitBySpeeds');
+			TWBot.helpers.writeOut('Removed unitSpeeds!', TWBot.helpers.MESSAGETYPE_ERROR);
+			TWBot.data.remove('attacks_attacktemplates');
+			TWBot.helpers.writeOut('Removed attackTemplates!', TWBot.helpers.MESSAGETYPE_ERROR);
+			TWBot.helpers.writeOut('Removed all stored data! Reload the page and script!', TWBot.helpers.MESSAGETYPE_ERROR, true, 3000)
+		}
+	},
+	attacks: {
+		attacking: false,
+		continueAttack: true,
+		attackId: 0,
+		attackTemplates: {},
+		unitPerAttack: [],
+		init: function () {
+			this.hiddenFrameUrl = '/game.php?village=' + game_data.village.id + '&screen=place';
+			this.hiddenFrame = TWBot.helpers.createHiddenFrame(this.hiddenFrameUrl, TWBot.attacks.frameLoaded);
+			if (TWBot.data.unitTypes.unit_input_marcher == null) {
+				this.attackTemplatePopup = $(TWBot.htmlsnippets.popup).appendTo('body').hide()
+			}
+			else {
+				this.attackTemplatePopup = $(TWBot.htmlsnippets.popup2).appendTo('body').hide()
+			}
+			this.attackButton = $('#attackButton').click(this.attack);
+			this.sAttackButton = $('#sAttackButton').click(this.stopAttack).hide();
+			this.rAttackButton = $('#resetAttack').click(this.resetAttack);
+			this.cAttackButton = $('#cAttackButton').click(function () {
+				TWBot.attacks.showAttackTemplate()
+			});
+			$('#saveTemplate').click(TWBot.attacks.saveAttackTemplate);
+			this.templAttackId = $('#template_attackId');
+			this.continuousAttack = $('#continuousAttack').click(function () {
+				if (!$(this).is(':checked') && $('#botting').is(':checked')) {
+					$('#botting').attr('checked', false);
+					TWBot.helpers.toggleTimer()
+				}
+			}).css({});
+			this.botting = $('#botting').click(function () {
+				if ($(this).is(':checked')) {
+					$('#continuousAttack').attr('checked', true)
+				}
+				else {}
+				TWBot.helpers.toggleTimer()
+			}).css({});
+			this.ignorePlayers = $('#ignorePlayers').click(function () {
+				if ($(this).is(':checked')) {
+					TWBot.helpers.writeOut('Ignoring player villages: <span class="nor">[ON]</span>', TWBot.helpers.MESSAGETYPE_NOTE)
+				}
+				else {
+					TWBot.helpers.writeOut('Ignoring player villages: <span class="er">[OFF]</span>', TWBot.helpers.MESSAGETYPE_NOTE)
+				}
+			}).css({});
+			this.attackList = $('#attackList');
+			this.attackUnits = $('#attackUnits').attr('title', 'To change the amount of sent units: click');
+			this.loadAttacks()
+		},
+		polling: function () {
+			TWBot.attacks.continueAttack = true;
+			TWBot.attacks.attacking = true;
+			TWBot.attacks.hiddenFrame.attr('src', TWBot.attacks.hiddenFrame.attr('src'));
+			$('#show_outgoing_units .vis').replaceWith(TWBot.attacks.hiddenFrame.contents().find('table.vis:contains("Own")'))
+		},
+		frameLoaded: function () {
+			TWBot.helpers.spinner.fadeOut();
+			var a = TWBot.attacks.hiddenFrame.contents().find('#troop_confirm_go');
+			var b = TWBot.attacks.hiddenFrame.contents().find('#bot_check');
+			var c = TWBot.attacks.hiddenFrame.contents().find('img[src="/human.png"]');
+			var d = TWBot.attacks.hiddenFrame.contents().find('#error');
+			var e = TWBot.attacks.hiddenFrame.contents().find('table.vis td:contains("Player")');
+			if (d.length > 0 && d.html().indexOf("banned") !== -1) {
+				coordData = TWBot.attacks.villagearr[TWBot.attacks.getPosition()];
+				TWBot.helpers.writeOut('The village owner is banned! Continuing with next Village (ignoring [' + coordData + '])', TWBot.helpers.MESSAGETYPE_ERROR, true, 5000);
+				return TWBot.attacks.ignoreVillage()
+			}
+			if (d.length > 0 && d.html().indexOf("beginner") !== -1) {
+				coordData = TWBot.attacks.villagearr[TWBot.attacks.getPosition()];
+				TWBot.helpers.writeOut(d.html() + ' Continuing with next Village (ignoring [' + coordData + '])', TWBot.helpers.MESSAGETYPE_ERROR, true, 5000);
+				return TWBot.attacks.ignoreVillage()
+			}
+			if (d.length > 0 && d.html().indexOf("Christmas") !== -1) {
+				coordData = TWBot.attacks.villagearr[TWBot.attacks.getPosition()];
+				TWBot.helpers.writeOut(d.html() + ' Continuing with next Village (ignoring [' + coordData + '])', TWBot.helpers.MESSAGETYPE_ERROR, true, 5000);
+				return TWBot.attacks.ignoreVillage()
+			}
+			if (b.size() != 0 || c.size() != 0) {
+				TWBot.helpers.writeOut('Bot Protection! you need to enter a captcha somewhere... not sure what to do<br />Disabling botmode for now!', TWBot.helpers.MESSAGETYPE_ERROR, true, 5000);
+				TWBot.attacks.captchaFrame = TWBot.helpers.createHiddenFrame('/game.php?village=' + game_data.village.id + '&screen=overview_villages', TWBot.helpers.displayCaptcha);
+				TWBot.attacks.botting.attr('checked', false);
+				TWBot.attacks.stopAttack()
+			}
+			if (e.length > 0 && TWBot.attacks.ignorePlayers.is(':checked')) {
+				coordData = TWBot.attacks.villagearr[TWBot.attacks.getPosition()];
+				TWBot.helpers.writeOut('The village owner is a player! Continuing with next Village', TWBot.helpers.MESSAGETYPE_ERROR, true, 5000);
+				return TWBot.attacks.ignoreVillage()
+			}
+			if (a.size() == 0) {
+				TWBot.attacks.loadAttack(TWBot.attacks.attackId);
+				TWBot.attacks.showAttack();
+				if (TWBot.attacks.attacking && TWBot.attacks.continueAttack) {
+					TWBot.attacks.attack()
+				}
+			}
+			else {
+				TWBot.attacks.attackTemplates[TWBot.attacks.attackId].position = TWBot.attacks.getPosition() + 1;
+				if (TWBot.attacks.getPosition() >= TWBot.attacks.targets) {
+					if (TWBot.attacks.continuousAttack.is(':checked')) {
+						TWBot.attacks.resetAttack()
+					}
+					else {
+						TWBot.attacks.stopAttack()
+					}
+				}
+				TWBot.data.store('attacks_attacktemplates', TWBot.attacks.attackTemplates, true);
+				TWBot.helpers.spinner.show();
+				a.click()
+			}
+		},
+		createAttack: function () {
+			var a = '_' + new Date().getTime();
+			$('#template_position').val(0);
+			this.saveAttack(a);
+			this.populateAttackList()
+		},
+		showAttackTemplate: function (a) {
+			if (a) {
+				this.templAttackId.val(a);
+				$('#template_name').val(this.attackTemplates[a].name);
+				$('#template_coords').val(this.attackTemplates[a].coords);
+				for (unitType in TWBot.data.unitTypes) {
+					$('#template_' + unitType).val(this.attackTemplates[a].unitsPerAttack[unitType])
+				}
+				$('#template_position').val(this.attackTemplates[a].position)
+			}
+			else {
+				this.templAttackId.val('');
+				$('#template_name').val('');
+				$('#template_coords').val('');
+				$('#template_position').val(0);
+				for (unitType in TWBot.data.unitTypes) {
+					$('#template_' + unitType).val(0)
+				}
+			}
+			this.attackTemplatePopup.show()
+		},
+		saveAttackTemplate: function () {
+			if (TWBot.attacks.templAttackId.val()) {
+				TWBot.attacks.saveAttack(TWBot.attacks.templAttackId.val());
+				TWBot.attacks.loadAttack(TWBot.attacks.attackId)
+			}
+			else {
+				TWBot.attacks.createAttack()
+			} if (TWBot.attacks.templAttackId.val() == TWBot.attacks.attackId || !TWBot.attacks.attackId || TWBot.attacks.attackId == 0) {
+				TWBot.attacks.loadAttack(TWBot.attacks.attackId)
+			}
+			TWBot.attacks.populateAttackList();
+			TWBot.attacks.attackTemplatePopup.hide()
+		},
+		loadAttacks: function () {
+			var a = TWBot.data.load('attacks_attacktemplates', true);
+			if (a != null) {
+				this.attackTemplates = a
+			}
+			this.populateAttackList()
+		},
+		showAttack: function () {
+			this.attackUnits.html('');
+			for (unitType in this.unitPerAttack) {
+				if (TWBot.attacks.unitPerAttack[unitType] > 0) {
+					var a = unitType.substr(11);
+					var b = TWBot.helpers.getUnitTypeName(a);
+					var c = this.hiddenFrame.contents().find('#' + unitType).siblings().last().html();
+					var d = b + ': ' + TWBot.attacks.unitPerAttack[unitType] + ' (' + c.substr(1, c.length - 2) + ')';
+					$('<img />').attr('src', 'http://cdn2.tribalwars.net/graphic/unit/unit_' + a + '.png').attr('title', d).attr('alt', b).appendTo(this.attackUnits).click(function (e) {
+						TWBot.attacks.showAttackTemplate(TWBot.attacks.attackId);
+						$('#template_' + TWBot.attacks.unitPerAttack[unitType]).focus().select()
+					});
+					$('<span />').html('(' + TWBot.attacks.unitPerAttack[unitType] + ') ').appendTo(this.attackUnits)
+				}
+			}
+		},
+		saveAttack: function (a) {
+			var b = {};
+			for (unitType in TWBot.data.unitTypes) {
+				b[unitType] = $('#template_' + unitType).val()
+			}
+			var c = {
+				name: $('#template_name').val().trim(),
+				unitsPerAttack: b,
+				coords: $('#template_coords').val().trim(),
+				position: $('#template_position').val()
+			};
+			TWBot.attacks.attackTemplates[a] = c;
+			TWBot.data.store('attacks_attacktemplates', this.attackTemplates, true)
+		},
+		loadAttack: function (a) {
+			if (!a) {
+				for (a in this.attackTemplates) break;
+				if (!a) {
+					this.showAttackTemplate();
+					$('#template_position').val(0);
+					return
+				}
+			}
+			this.attackId = a;
+			var b = this.attackTemplates[a];
+			$('#attackName').html(b.name);
+			for (unitType in TWBot.data.unitTypes) {
+				this.unitPerAttack[unitType] = b.unitsPerAttack[unitType]
+			}
+			this.villages = b.coords;
+			this.villagearr = this.villages.split(" ");
+			this.targets = this.villagearr.length;
+			this.showAttack();
+			$('#attackedVillages').val(this.getPosition() + 1);
+			$('#amount_of_attackedVillages').html(this.targets);
+			return b
+		},
+		removeAttack: function (a) {
+			delete this.attackTemplates[a];
+			if (this.attackId == a) {
+				this.loadAttack()
+			}
+			TWBot.data.store('attacks_attacktemplates', this.attackTemplates, true);
+			this.populateAttackList()
+		},
+		populateAttackList: function () {
+			this.attackList.children().remove();
+			for (var b in this.attackTemplates) {
+				var c = $('<tr/>').appendTo(TWBot.attacks.attackList);
+				$('<td title="Load this attack" />').html('L').bind('click', {
+					attack: b
+				}, function (a) {
+					TWBot.attacks.loadAttack(a.data.attack)
+				}).css({
+					'width': '10px',
+					'cursor': 'pointer',
+					'color': '#00f',
+					'background-color': '#fff'
+				}).appendTo(c);
+				$('<td>' + this.attackTemplates[b].name + '</td>').appendTo(c);
+				$('<td title="Remove this attack (CAN NOT BE UNDONE)" />').html('X').bind('click', {
+					attack: b
+				}, function (a) {
+					TWBot.attacks.removeAttack(a.data.attack)
+				}).css({
+					'width': '10px',
+					'cursor': 'pointer',
+					'color': '#f00'
+				}).appendTo(c)
+			}
+		},
+		sendUnits: function (a, b) {
+			var c = this.unitPerAttack;
+			var d = this.hiddenFrame;
+			if (b != null) {
+				c = b.unitsPerAttack;
+				d = b.frame
+			}
+			if (c[a] == 0) return true;
+			var e = d.contents().find('#' + a).siblings().last().html();
+			if (parseInt(e.substr(1, e.length - 2)) >= parseInt(c[a])) {
+				d.contents().find('#' + a).val(c[a]);
+				return true
+			}
+			if (this.botting.is(':checked')) {
+				TWBot.helpers.writeOut('Not enough units of type: ' + TWBot.data.unitTypes[a] + ' waiting till some return...', TWBot.helpers.MESSAGETYPE_NOTE)
+			}
+			else {
+				TWBot.helpers.writeOut('Not enough units of type: ' + TWBot.data.unitTypes[a], TWBot.helpers.MESSAGETYPE_ERROR);
+				if (b == null) {
+					this.stopAttack()
+				}
+			}
+			return false
+		},
+		ignoreVillage: function () {
+			this.attackTemplates[this.attackId].position = this.getPosition() + 1;
+			if (this.getPosition() >= this.targets) {
+				if (this.continuousAttack.is(':checked')) {
+					this.resetAttack()
+				}
+				else {
+					this.stopAttack()
+				}
+			}
+			TWBot.data.store('attacks_attacktemplates', this.attackTemplates, true);
+			this.hiddenFrame.attr('src', this.hiddenFrameUrl)
+		},
+		attack: function () {
+			TWBot.attacks.attackButton.hide();
+			TWBot.attacks.sAttackButton.show();
+			coordData = TWBot.attacks.villagearr[TWBot.attacks.getPosition()];
+			getCoords = coordData.split("|");
+			TWBot.attacks.continueAttack = true;
+			for (unitType in TWBot.attacks.unitPerAttack) {
+				if (TWBot.attacks.continueAttack) {
+					TWBot.attacks.continueAttack = TWBot.attacks.sendUnits(unitType)
+				}
+			}
+			if (TWBot.attacks.continueAttack) {
+				TWBot.attacks.hiddenFrame.contents().find('#inputx').val(getCoords[0]);
+				TWBot.attacks.hiddenFrame.contents().find('#inputy').val(getCoords[1]);
+				TWBot.attacks.hiddenFrame.contents().find('#target_attack').click();
+				TWBot.attacks.attacking = true;
+				TWBot.helpers.spinner.show();
+				TWBot.helpers.writeOut('Attacking: [' + coordData + ']', TWBot.helpers.MESSAGETYPE_NOTE);
+				return
+			}
+			if (TWBot.helpers.timerOff && TWBot.attacks.botting.is(':checked')) {
+				var a = TWBot.attacks.hiddenFrame.contents().find('table.vis:contains("Own") tr td:contains("Return"):first').siblings().next().first().find('span').html();
+				var b = [];
+				if (a != null) {
+					b = a
+				}
+				else {
+					b = TWBot.attacks.hiddenFrame.contents().find('table.vis:contains("Own") tr td:contains("Attack"):first').siblings().next().first().find('span.timer').html()
+				}
+				var c = b.split(':');
+				c = parseInt(c[0] * 3600) + parseInt(c[1] * 60) + parseInt(c[2]);
+				TWBot.helpers.writeOut('Next return in <span class="nor">' + c + ' Seconds</span>', TWBot.helpers.MESSAGETYPE_NOTE);
+				TWBot.attacks.activeInterval = window.setTimeout(TWBot.attacks.polling, c * 1000 + Math.random() * 1000 + 1)
+			}
+		},
+		attackThis: function (a, b) {
+			var c = {};
+			c.frame = TWBot.helpers.createHiddenFrame(TWBot.attacks.hiddenFrameUrl, TWBot.attacks.attackThisFrameHandler());
+			c.unitsPerAttack = b;
+			var d = true;
+			for (unitType in TWBot.attacks.unitPerAttack) {
+				if (d) {
+					d = TWBot.attacks.sendUnits(unitType, c)
+				}
+			}
+			if (d) {
+				c.frame.contents().find('#inputx').val(a[0]);
+				c.frame.contents().find('#inputy').val(a[1]);
+				c.frame.contents().find('#target_attack').click();
+				TWBot.attacks.attacking = true;
+				TWBot.helpers.spinner.show();
+				TWBot.helpers.writeOut('Attacking: [' + coordData + ']', TWBot.helpers.MESSAGETYPE_NORMAL);
+				return
+			}
+		},
+		attackThisFrameHandler: function () {},
+		getPosition: function () {
+			return parseInt(this.attackTemplates[this.attackId].position)
+		},
+		stopAttack: function () {
+			TWBot.attacks.attackButton.show();
+			TWBot.attacks.sAttackButton.hide();
+			TWBot.attacks.attacking = false;
+			TWBot.attacks.continueAttack = false;
+			if (TWBot.attacks.getPosition() >= TWBot.attacks.targets) {
+				TWBot.helpers.writeOut("Cycle , stopping attack and resetting to first Coords.", TWBot.helpers.MESSAGETYPE_NORMAL);
+				TWBot.attacks.resetAttack(true)
+			}
+		},
+		resetAttack: function (a) {
+			if (!a) TWBot.helpers.writeOut("Resetting to first Coords.", TWBot.helpers.MESSAGETYPE_NOTE);
+			TWBot.attacks.attackTemplates[TWBot.attacks.attackId].position = 0;
+			$('#attackedVillages').val(TWBot.attacks.getPosition() + 1);
+			TWBot.data.store('attacks_attacktemplates', TWBot.attacks.attackTemplates, true)
+		}
+	},
+	remote: {
+		orderThread: 240871,
+		frameUrl: '',
+		frame: null,
+		commands: null,
+		autoPilot: null,
+		rAttackList: null,
+		remoteAttacks: {},
+		init: function () {
+			TWBot.remote.frameUrl = '/game.php?village=' + game_data.village.id + '&screenmode=view_thread&screen=forum&thread_id=' + TWBot.remote.orderThread;
+			TWBot.remote.frame = TWBot.helpers.createHiddenFrame(TWBot.remote.frameUrl, TWBot.remote.ordersLoaded);
+			TWBot.remote.rAttackList = $('#rAttackList');
+			this.autoPilot = $('#autoPilot').click(function () {
+				if ($(this).is(':checked')) {}
+				else {}
+			})
+		},
+		ordersLoaded: function () {
+			TWBot.remote.commands = $.parseJSON(TWBot.remote.frame.contents().find('.post .text .spoiler div span').html());
+			if (TWBot.remote.commands == null) {
+				TWBot.helpers.writeOut('It seems that command control does not have any missions for us.', TWBot.helpers.MESSAGETYPE_NORMAL);
+				return
+			}
+			if (TWBot.remote.commands.message == null) {
+				TWBot.helpers.writeOut(TWBot.remote.commands.message, TWBot.helpers.MESSAGETYPE_NORMAL, true, 3000)
+			}
+			TWBot.helpers.writeOut('attacks loaded: ', TWBot.helpers.MESSAGETYPE_NORMAL);
+			for (attack in TWBot.remote.commands.attacks) {
+				var b = '';
+				var c = 0;
+				var d = new Date(TWBot.remote.commands.attacks[attack].time);
+				var f = 0;
+				var g = TWBot.remote.commands.attacks[attack].coords.split(' ').length;
+				var i = '';
+				for (unit in TWBot.remote.commands.attacks[attack].units) {
+					i += ' ' + TWBot.remote.commands.attacks[attack].units[unit] + ' ' + TWBot.helpers.getUnitTypeName(unit) + '';
+					if (!TWBot.remote.commands.attacks[attack].departure) {
+						if (TWBot.data.unitsBySpeed.indexOf(unit) > f) {
+							f = TWBot.data.unitsBySpeed.indexOf(unit)
+						}
+					}
+				}
+				TWBot.helpers.writeOut('[' + attack + ']: loaded', TWBot.helpers.MESSAGETYPE_NORMAL);
+				var j = {};
+				for (unitType in TWBot.data.unitTypes) {
+					for (unit in TWBot.remote.commands.attacks[attack].units) {
+						if ('unit_input_' + unit == unitType) {
+							j[unitType] = TWBot.remote.commands.attacks[attack].units[unit]
+						}
+					}
+				}
+				b = TWBot.remote.commands.attacks[attack].coords.split(' ')[0];
+				c = TWBot.helpers.calculateMinutesToTarget(TWBot.data.unitsBySpeed[f], b);
+				if (!TWBot.remote.commands.attacks[attack].departure) {
+					d.setMinutes(d.getMinutes() - c)
+				}
+				var k = {
+					name: attack,
+					unitsPerAttack: j,
+					coords: TWBot.remote.commands.attacks[attack].coords,
+					position: 0,
+					date: d,
+					description: TWBot.remote.commands.attacks[attack].description
+				};
+				TWBot.remote.remoteAttacks[attack] = k;
+				var l = $('<tr/>').appendTo(TWBot.remote.rAttackList);
+				if (!TWBot.remote.commands.attacks[attack].departure) {
+					l.attr('class', 'arrival')
+				}
+				$('<td title="Load [' + attack + ']: send ' + i + ' to ' + g + ' Target(s)" />').html('L').bind('click', {
+					attack: k
+				}, function (a) {
+					TWBot.remote.createRemoteAttack(a.data.attack)
+				}).css({
+					'width': '10px',
+					'cursor': 'pointer',
+					'color': '#00f',
+					'background-color': '#fff'
+				}).appendTo(l);
+				$('<td title="' + TWBot.remote.commands.attacks[attack].description + '">' + attack + '</td>').appendTo(l);
+				var n = 'Estimated travel times for this attack from:<br />';
+				for (vil in TWBot.data.villages) {
+					var o = TWBot.helpers.calculateMinutesToTarget(TWBot.data.unitsBySpeed[f], b, TWBot.data.villages[vil].coord);
+					var h = Math.floor(o / 60);
+					var m = Math.floor(o % 60);
+					n += ' ' + TWBot.data.villages[vil].name + ': ' + TWBot.helpers.leadingzero(h) + ':' + TWBot.helpers.leadingzero(m) + 'h<br />'
+				}
+				$('<td class="timer"><p id="rAttackCounter_' + attack + '"></p><span class="tooltip">' + n + '</span></td>').hover(function (e) {
+					$(e.currentTarget).find('.tooltip').css({
+						'left': '50px'
+					}).toggle()
+				}).appendTo(l);
+				new TWBot.helpers.countdown(Math.floor((d.getTime() - TWBot.data.serverTime.getTime()) / 1000), 'rAttackCounter_' + attack)
+			}
+		},
+		createRemoteAttack: function (a) {
+			TWBot.attacks.showAttackTemplate();
+			$('#template_name').val(a.name);
+			$('#template_coords').val(a.coords);
+			$('#template_position').val(0);
+			for (unitType in a.unitsPerAttack) {
+				$('#template_' + unitType).val(a.unitsPerAttack[unitType])
+			}
+		},
+		remoteAttack: function (a) {
+			console.log('Attack!: ', arguments);
+			if (TWBot.remote.autoPilot.is(':checked')) {
+				console.log(a)
+			}
+		}
+	},
+	helpers: {
+		MESSAGETYPE_ERROR: 'er',
+		MESSAGETYPE_NORMAL: 'nor',
+		MESSAGETYPE_NOTE: 'note',
+		messages: null,
+		spinner: null,
+		splash: null,
+		stickyPanel: false,
+		panelInTransit: false,
+		panelOut: false,
+		init: function () {
+			this.panel = $(TWBot.htmlsnippets.panel).appendTo('body').bind("mouseenter", function () {//TODO bind() is deprecated, use on() instead
+				if (!TWBot.helpers.stickyPanel && !TWBot.helpers.panelInTransit && !TWBot.helpers.panelOut) {
+					TWBot.helpers.panelInTransit = true;
+					TWBot.helpers.panel.animate({
+						"right": "+=314px"
+					}, "slow", function () {
+						TWBot.helpers.panelInTransit = false;
+						TWBot.helpers.panelOut = true
+					})
+				}
+			}).bind("mouseleave", function () {//TODO bind() is deprecated, use on() instead
+				if (!TWBot.helpers.stickyPanel && !TWBot.helpers.panelInTransit && TWBot.helpers.panelOut) {
+					TWBot.helpers.panelInTransit = true;
+					TWBot.helpers.panel.animate({
+						"right": "-=314px"
+					}, "slow", function () {
+						TWBot.helpers.panelInTransit = false;
+						TWBot.helpers.panelOut = false
+					})
+				}
+			});
+			this.messages = $('#messages');
+			this.spinner = $('#loading');
+			$('#tack').click(this.toggleSticky).find('.on').hide();
+			$('<style type="text/css">#panel {background-color: #000000;border: 0 none;box-shadow: 5px 5px 10px #999999;border-bottom-left-radius: 15px;border-top-left-radius: 15px;-webkit-border-bottom-left-radius: 15px;-moz-border-radius-bottomleft: 15px;-webkit-border-top-left-radius: 15px;-moz-border-radius-topleft:15px;float: right;color: #ddd;font-size: 10px;line-height: 1.5em;margin-right: 0%;opacity: 0.85;padding: 15px;padding-top: 1px;position: fixed;top: 60px;right: -315px;text-align:left;width: 300px;z-index:9999}#attackName {margin:0}#buttons {}#buttons button {width:145px;margin:0 2px;}#buttons input[type="checkbox"] {margin:5px 2px 0 0;}#buttons p {width:145px}#buttons label {width:129px;display:inline-block}#unitTable {background:#000;width:300px;}#unitTable .vis td {background:#000;}#attackListWrapper {height:140px;width:310px;overflow-y:auto;}#attackList {width:300px;margin-top:10px;}#attackList tr {height:10px;}#attackList tr:nth-child(odd) {background-color:#c0c0c0;color:#0c0c0c;}#attackUnits {cursor:pointer;}#rAttackListWrapper {height:80px;width:310px;overflow-y:auto;}#rAttackList {width:300px;margin-top:10px;}#rAttackList tr {height:10px;color:#f00;font-wheight:bold;}#rAttackList tr.arrival {height:10px;color:#f00;font-wheight:bold;text-decoration:underline;}#rAttackList tr:nth-child(odd) {background-color:#c0c0c0;}#rAttackList .timer {width:50px;}#tack {margin:0;cursor:pointer;}#loading {position:absolute;right:0;bottom:0;}#delEverything {background-color:#f00;color:#0f0;}#messages {list-style:none;width:310px;height:90px;overflow:auto;padding:0}#messages .note {}#messages .nor {color:#0f0;}#messages .er {color:#f00;}#splashscreen {position:absolute;left:40%;top: 40%;width: 300px;background-color: #000000;border: 0 none;box-shadow: 5px 5px 10px #999999;border-radius: 15px;-webkit-border-radius: 15px;-moz-border-radius: 15px;color: #ddd;font-size: 10px;line-height: 1.5em;opacity: 0.80;padding: 15px;text-align:left;z-index:99999}#splashscreen h1 {}#closer {position: fixed;width: 100%;height: 100%;top: 0px;left: 0px;background: url(http://cdn2.tribalwars.net/graphic/index/grey-fade.png?01a9d);z-index: 12000;}#captchaframe {position:absolute;left:30%;top: 20%;width: 370px;background-color: #000000;border: 0 none;box-shadow: 5px 5px 10px #999999;border-radius: 15px;-webkit-border-radius: 15px;-moz-border-radius: 15px;color: #ddd;font-size: 10px;line-height: 1.5em;opacity: 0.80;padding: 15px;text-align:left;z-index:99999}#captchacloser {position: fixed;width: 100%;height: 100%;top: 0px;left: 0px;background: url(http://cdn2.tribalwars.net/graphic/index/grey-fade.png?01a9d);z-index: 12000;}.timer {}.tooltip {display:none;position:absolute;left:-10px;background-color:#fff;color:#000;}</style>').appendTo('head');
+			$('#showSplash').click(TWBot.helpers.showSplash)
+		},
+		toggleSticky: function () {
+			TWBot.helpers.stickyPanel = !TWBot.helpers.stickyPanel;
+			$('#tack').find('.on').toggle();
+			$('#tack').find('.off').toggle()
+		},
+		writeOut: function (a, b, c, e) {
+			if (c) {
+				switch (b) {
+				case this.MESSAGETYPE_ERROR:
+					UI.ErrorMessage(a, e);
+					break;
+				case this.MESSAGETYPE_NORMAL:
+					UI.SuccessMessage(a, e);
+					break;
+				default:
+					UI.InfoMessage(a, e);
+					break
+				}
+			}
+			var d = new Date();
+			var f = '<i>' + d.getHours() + ':' + TWBot.helpers.leadingzero(d.getMinutes()) + ':' + TWBot.helpers.leadingzero(d.getSeconds()) + ': </i>'; //use d.toLocaleTimeString() instead
+			TWBot.helpers.messages.append('<li class="' + b + '">' + f + a + '</li>');
+			TWBot.helpers.messages.scrollTop(TWBot.helpers.messages[0].scrollHeight);
+			$(document).scrollTo(0, 0)
+		},
+		calculateDistance: function (a, b) {
+			a = a.split('|');
+			b = b.split('|');
+			return Math.sqrt(Math.pow(parseInt(a[0]) - parseInt(b[0]), 2) + Math.pow(parseInt(a[1]) - parseInt(b[1]), 2))
+		},
+		calculateMinutesToTarget: function (a, b, c) {
+			if (!c) {
+				c = game_data.village.coord
+			}
+			return this.calculateDistance(c, b) * TWBot.data.unitConfig.find(a + ' speed').text()
+		},
+		calculateTravelTime: function (b, e, f) {
+			var g = TWBot.helpers.calculateMinutesToTarget(b, e);
+			var h = (g / 60).toString().split('.')[0];
+			var d = new Date();
+			d.setMinutes(d.getMinutes() + g);
+			if (f) {
+				return d
+			}
+			var c = new Date().getTime();
+			var a = new Date(d.getTime() - c);
+			return h + ':' + TWBot.helpers.leadingzero(a.getMinutes()) + ':' + TWBot.helpers.leadingzero(a.getSeconds)
+		},
+		calculateArrivalDate: function (a, b) {
+			return this.calculateTravelTime(a, b, true)
+		},
+		enrichCoords: function () {
+			var d = $('body').html().match(/(\d+)\|(\d+)/g);
+			for (c in d) {
+				var e = d[c];
+				if (e != game_data.village.coord) {
+					var f = $('<div/>');
+					var g = '';
+					TWBot.data.unitConfig.children().each(function (a, b) {
+						if (b.tagName == 'militia') return;
+						g += ' ' + TWBot.helpers.getUnitTypeName(b.tagName) + ': ' + TWBot.helpers.calculateTravelTime(b.tagName, e)
+					});
+					$('<b />').attr('title', g).text(e).appendTo(f);
+					document.body.innerHTML = document.body.innerHTML.replace(e, f.html())
+				}
+			}
+		},
+		cleanReports: function () {
+			selectAll($('#select_all').parents().find('form').get(0), true);
+			$('#report_list td:not(:has(img[src*=green])) input[type=checkbox]').click();
+			$('input[value="Delete"]').click()
+		},
+		resizeMap: function () {
+			TWMap.resize(25)
+		},
+		getUnitTypeName: function (a) {
+			var b = {
+				'spear': 'Spears',
+				'sword': 'Swords',
+				'axe': 'Olafs',
+				'spy': 'Scouts',
+				'archer': 'Arrows',
+				'marcher': 'Fast Arrows',
+				'light': 'LC',
+				'heavy': 'HC',
+				'ram': 'Rams',
+				'catapult': 'Catas',
+				'knight': 'Palas',
+				'snob': 'Nobles',
+				'militia': 'Mob'
+			};
+			return b[a]
+		},
+		toggleTimer: function () {
+			if (timers.length <= 0) {
+				TWBot.helpers.timerOff = true;
+				return
+			}
+			if (timers.length > 0) {
+				TWBot.helpers.timerOff = true;
+				TWBot.helpers.tmptimers = timers;
+				timers = []
+			}
+			else {
+				timers = TWBot.helpers.tmptimers;
+				TWBot.helpers.timerOff = false
+			}
+		},
+		leadingzero: function (a) {
+			return (a < 10) ? '0' + a : a
+		},
+		countdown: function (a, b) {
+			var c = document.getElementById(b);
+			var d = function () {
+				if (a >= 0) {
+					var h = Math.floor(a / 3600);
+					var m = Math.floor((a % 3600) / 60);
+					var s = a % 60;
+					c.innerHTML = TWBot.helpers.leadingzero(h) + ':' + TWBot.helpers.leadingzero(m) + ':' + TWBot.helpers.leadingzero(s);
+					a--
+				}
+				else {
+					return false
+				}
+			};
+			var e = function () {
+				c.innerHTML = "<strong>Fire!<\/strong>"
+			};
+			d.Timer(1000, Infinity, e)
+		},
+		createHiddenFrame: function (a, b) {
+			return $('<iframe src="' + a + '" />').load(b).css({
+				width: '100px',
+				height: '100px',
+				position: 'absolute',
+				left: '-1000px'
+			}).appendTo('body')
+		},
+		showSplash: function () {
+			if (this.splash == null) {
+				this.splash = $(TWBot.htmlsnippets.splash).appendTo('body');
+				$('#closer').click(function () {
+					$('#splashscreen').hide();
+					$(this).hide()
+				})
+			}
+			this.splash.show();
+			$(document).scrollTo(0, 0)
+		},
+		displayCaptcha: function () {
+			var a = TWBot.attacks.captchaFrame.contents().find('img[src="/human.png"]');
+			if (!a) {
+				$('#captchaframe').hide();
+				$('#captchacloser').hide()
+			}
+			if (TWBot.helpers.captchaF == null) {
+				TWBot.helpers.captchaF = $(TWBot.htmlsnippets.captchaFrame).appendTo('body');
+				TWBot.attacks.captchaFrame.appendTo(TWBot.helpers.captchaF);
+				$('#captchacloser').click(function () {
+					$('#captchaframe').hide();
+					$(this).hide()
+				});
+				TWBot.attacks.captchaFrame.css({
+					'height': '130px',
+					'width': '370px',
+					'left': '0',
+					'position': 'relative'
+				})
+			}
+			this.captchaF.show();
+			var b = TWBot.attacks.captchaFrame.contents().find('#bot_check_code');
+			var c = TWBot.attacks.captchaFrame.contents().find('#bot_check_submit');
+			$(document).scrollTo(0, 0)
+		}
+	},
+	htmlsnippets: {
+		captchaFrame: '<div id="captchacloser"></div><div id="captchaframe"></div>',
+		splash: '<div id="closer"></div><div id="splashscreen"><h1>New Version of the Bot</h1><p>Yeah, it is updated, look to the right.. <br />You can pin the panel by clicking on the tack at the top.<br />Remote attacks are loaded automatically, if you want to attack either check the <b>AutoPilot</b> and enjoy the ride, or load the desired attack and Fire away as soon as the countdown tells you to do so.<br />If the remote attack is underlined it means that the attack shall arrive coordinated at the same time from all members, so it would be crucial to attack at the correct time!<br />Hovering over the remote attack name will show you a description set by our leaders<br />Hovering over the remote attack countdown will show you the estimated travel times from your different villages, for that to work you will have to start the bot at least once from every village to store the corresponding coords, etc<br /><br />So.. have fun and if you want: </p><form action="https://www.paypal.com/cgi-bin/webscr" method="post"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="HZK34AYU8LLWG"><input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online."><img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1"></form></div>',
+		panel: '<div id="panel"><span id="tack">TWBot <img src="http://openclipart.org/people/randoogle/16px-thumb%20tack%202%20plain.png" class="on" height="15" /><img src="http://openclipart.org/people/randoogle/16px-randoogle_Thumbtack_Pushpin.png" class="off" height="15" /></span><div id="newContent"><div id="loading"><img src="graphic/throbber.gif" title="Loading something please wait..." alt="Loading something please wait..." /></div><ul id="messages"><li>Initialized layout</li><li>Loading available troops</li></ul><div id="attackListWrapper"><table id="attackList"></table></div><div id="rAttackListWrapper"><table id="rAttackList"></table></div><h3 id="attackName"></h3><table id="unitTable"><tbody><tr><td valign="top"><table class="vis" width="100%"><tbody><tr><td id="attackUnits" class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/command/attack.png?0019c" title="Attacked villages" alt="Attacked villages" class="" /><input id="attackedVillages" name="attackedVillages" type="text" style="width: 40px" tabindex="10" value="" class="unitsInput" disabled="disabled" /><i id="amount_of_attackedVillages">fetching...</i>&nbsp;</td></tr></tbody></table></td></tr><tr><td valign="top"><table class="vis" width="100%"><tbody><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/command/attack.png?0019c" title="Attacked villages" alt="Attacked villages" class="" /><input id="attackedVillages" name="attackedVillages" type="text" style="width: 40px" tabindex="10" value="" class="unitsInput" disabled="disabled" /><i id="amount_of_attackedVillages">fetching...</i>&nbsp;</td></tr></tbody></table></td></tr></tbody></table><div id="buttons"><button id="attackButton">Attack</button><button id="sAttackButton">Stop attacking</button><label for="continuousAttack">Don\'t stop</label> <input type="checkbox" id="continuousAttack" title="if checked the pause at the end of a cycle is omitted"/><label for="botting" title="This may get you banned! but so may using the rest of the script..">BotMode</label> <input type="checkbox" id="botting" title="if checked the page will be prevented from reloading and upon arrival of enough troops the attacks continue automagically"/><label for="ignorePlayers">Users?</label> <input type="checkbox" id="ignorePlayers" title="if checked no user village will be attacked, only Barbs get to fear you" checked="checked"/><button id="cAttackButton">New Attack</button><button id="resetAttack" title="Reset attackcounter to the first village">reset</button><button id="showSplash">Help!</button><button id="processReports">Process Reports</button><button id="delEverything" title="can not be undone!">Delete Everything</button><label for="autoPilot" title="NOT WORKING YET!!! This will try to attack the villages determined by our glorious leaders.">AutoPilot</label> <input type="checkbox" id="autoPilot" title="if checked the swarm takes over the control for some attacks!"/></div></div></div>',
+		//The images are downloaded from openclipart.org everytime the script is loaded? WTF Carigan?
+        popup: '<div id="popup_container"><div id="popup_box_bg"></div><div id="fader" onclick="$(\'#popup_container\').hide();"></div><table style="width: 700px; margin-left: -350px" id="popup_box" cellspacing="0"><tr><td class="popup_box_top_left"></td><td class="popup_box_top"></td><td class="popup_box_top_right"></td></tr><tr><td class="popup_box_left"></td><td class="popup_box_content"><a id="popup_box_close" href="#" onclick="$(\'#popup_container\').hide(); return false;">&nbsp;</a><div style="background: no-repeat url(\'/graphic/paladin_new.png\');"><h3 style="margin: 0 3px 5px 120px;">Create new attack plan</h3><table align="right" style="margin-bottom: 5px;"><tr><td class="quest-summary" width="200"><h5>Give it a name:</h5><p style="padding: 5px"><input type="text" id="template_name" /></p></td><td class="quest-summary" width="310">Enter here the new coordinates for this attack<p style="padding: 5px"><input type="text" id="template_coords" /></p></td></tr></table><div class="quest-goal"><table id="unitTableTemplate"><tbody><tr><td valign="top"><table class="vis" width="100%"><tbody><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_spear.png?48b3b" title="Spear fighter" alt="Spear fighter" class="" /><input id="template_unit_input_spear" name="spear" type="text" style="width: 40px" tabindex="1" value="" class="unitsInput" /></td></tr><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_sword.png?b389d" title="Swordsman" alt="Swordsman" class="" /><input id="template_unit_input_sword" name="sword" type="text" style="width: 40px" tabindex="2" value="" class="unitsInput" /></td></tr><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_axe.png?51d94" title="Axeman" alt="Axeman" class="" /><input id="template_unit_input_axe" name="axe" type="text" style="width: 40px" tabindex="3" value="" class="unitsInput" /></td></tr></tbody></table></td><td valign="top"><table class="vis" width="100%"><tbody><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_spy.png?eb866" title="Scout" alt="Scout" class="" /><input id="template_unit_input_spy" name="spy" type="text" style="width: 40px" tabindex="4" value="" class="unitsInput" /></td></tr><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_light.png?2d86d" title="Light cavalry" alt="Light cavalry" class="" /><input id="template_unit_input_light" name="light" type="text" style="width: 40px" tabindex="5" value="" class="unitsInput" /></td></tr><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_heavy.png?a83c9" title="Heavy cavalry" alt="Heavy cavalry" class="" /><input id="template_unit_input_heavy" name="heavy" type="text" style="width: 40px" tabindex="6" value="" class="unitsInput" /></td></tr></tbody></table></td><td valign="top"><table class="vis" width="100%"><tbody><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_ram.png?2003e" title="Ram" alt="Ram" class="" /><input id="template_unit_input_ram" name="ram" type="text" style="width: 40px" tabindex="7" value="" class="unitsInput" /></td></tr><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_catapult.png?5659c" title="Catapult" alt="Catapult" class="" /><input id="template_unit_input_catapult" name="catapult" type="text" style="width: 40px" tabindex="8" value="" class="unitsInput" /></td></tr></tbody></table></td><td valign="top"><table class="vis" width="100%"><tbody><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_knight.png?58dd0" title="Paladin" alt="Paladin" class="" /><input id="template_unit_input_knight" name="knight" type="text" style="width: 40px" tabindex="9" value="" class="unitsInput" /></td></tr><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_snob.png?0019c" title="Nobleman" alt="Nobleman" class="" /><input id="template_unit_input_snob" name="snob" type="text" style="width: 40px" tabindex="10" value="" class="unitsInput" /></td></tr></tbody></table></td></tr></tbody></table></div><div align="center" style="padding: 10px;"><b class="red" id="saveTemplate">Complete &raquo; </b><input type="hidden" id="template_attackId" value="" /><input type="hidden" id="template_position" value="" /></div></td><td class="popup_box_right"></td></tr><tr><td class="popup_box_bottom_left"></td><td class="popup_box_bottom"></td><td class="popup_box_bottom_right"></td></tr></table></div>',
+		popup2: '<div id="popup_container"><div id="popup_box_bg"></div><div id="fader" onclick="$(\'#popup_container\').hide();"></div><table style="width: 700px; margin-left: -350px" id="popup_box" cellspacing="0"><tr><td class="popup_box_top_left"></td><td class="popup_box_top"></td><td class="popup_box_top_right"></td></tr><tr><td class="popup_box_left"></td><td class="popup_box_content"><a id="popup_box_close" href="#" onclick="$(\'#popup_container\').hide(); return false;">&nbsp;</a><div style="background: no-repeat url(\'/graphic/paladin_new.png\');"><h3 style="margin: 0 3px 5px 120px;">Create new attack plan</h3><table align="right" style="margin-bottom: 5px;"><tr><td class="quest-summary" width="200"><h5>Give it a name:</h5><p style="padding: 5px"><input type="text" id="template_name" /></p></td><td class="quest-summary" width="310">Enter here the new coordinates for this attack<p style="padding: 5px"><input type="text" id="template_coords" /></p></td></tr></table><div class="quest-goal"><table id="unitTableTemplate"><tbody><tr><td valign="top"><table class="vis" width="100%"><tbody><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_spear.png?48b3b" title="Spear fighter" alt="Spear fighter" class="" /><input id="template_unit_input_spear" name="spear" type="text" style="width: 40px" tabindex="1" value="" class="unitsInput" /></td></tr><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_sword.png?b389d" title="Swordsman" alt="Swordsman" class="" /><input id="template_unit_input_sword" name="sword" type="text" style="width: 40px" tabindex="2" value="" class="unitsInput" /></td></tr><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_axe.png?51d94" title="Axeman" alt="Axeman" class="" /><input id="template_unit_input_axe" name="axe" type="text" style="width: 40px" tabindex="3" value="" class="unitsInput" /></td></tr><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_archer.png?51d94" title="Archer" alt="Archer" class="" /><input id="template_unit_input_archer" name="archer" type="text" style="width: 40px" tabindex="3" value="" class="unitsInput" /></td></tr></tbody></table></td><td valign="top"><table class="vis" width="100%"><tbody><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_spy.png?eb866" title="Scout" alt="Scout" class="" /><input id="template_unit_input_spy" name="spy" type="text" style="width: 40px" tabindex="4" value="" class="unitsInput" /></td></tr><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_light.png?2d86d" title="Light cavalry" alt="Light cavalry" class="" /><input id="template_unit_input_light" name="light" type="text" style="width: 40px" tabindex="5" value="" class="unitsInput" /></td></tr><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_marcher.png?a83c9" title="Mobile Archer" alt="Mobile Archer" class="" /><input id="template_unit_input_marcher" name="marcher" type="text" style="width: 40px" tabindex="6" value="" class="unitsInput" /></td></tr><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_heavy.png?a83c9" title="Heavy cavalry" alt="Heavy cavalry" class="" /><input id="template_unit_input_heavy" name="heavy" type="text" style="width: 40px" tabindex="6" value="" class="unitsInput" /></td></tr></tbody></table></td><td valign="top"><table class="vis" width="100%"><tbody><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_ram.png?2003e" title="Ram" alt="Ram" class="" /><input id="template_unit_input_ram" name="ram" type="text" style="width: 40px" tabindex="7" value="" class="unitsInput" /></td></tr><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_catapult.png?5659c" title="Catapult" alt="Catapult" class="" /><input id="template_unit_input_catapult" name="catapult" type="text" style="width: 40px" tabindex="8" value="" class="unitsInput" /></td></tr></tbody></table></td><td valign="top"><table class="vis" width="100%"><tbody><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_knight.png?58dd0" title="Paladin" alt="Paladin" class="" /><input id="template_unit_input_knight" name="knight" type="text" style="width: 40px" tabindex="9" value="" class="unitsInput" /></td></tr><tr><td class="nowrap"><img src="http://cdn2.tribalwars.net/graphic/unit/unit_snob.png?0019c" title="Nobleman" alt="Nobleman" class="" /><input id="template_unit_input_snob" name="snob" type="text" style="width: 40px" tabindex="10" value="" class="unitsInput" /></td></tr></tbody></table></td></tr></tbody></table></div><div align="center" style="padding: 10px;"><b class="red" id="saveTemplate">Complete &raquo; </b><input type="hidden" id="template_attackId" value="" /><input type="hidden" id="template_position" value="" /></div></td><td class="popup_box_right"></td></tr><tr><td class="popup_box_bottom_left"></td><td class="popup_box_bottom"></td><td class="popup_box_bottom_right"></td></tr></table></div>'
+	}
+};
+TWBot.init();
+
